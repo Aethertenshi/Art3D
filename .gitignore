@@ -1,0 +1,31 @@
+# Build outputs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+*.exe
+*.ilk
+*.pdb
+*.obj
+*.ifc
+*.iobj
+*.ipdb
+
+# Visual Studio files
+.vs/
+*.vcxproj.user
+*.sln.docstates
+*.suo
+*.ncb
+*.sdf
+*.opensdf
+*.db
+*.opendb
+
+# VS Code files
+.vscode/ipch/
+
+# SDL DLLs exception (keep DLLs/libs inside art.libs)
+!/art.libs/**/*.dll
+!/art.libs/**/*.lib

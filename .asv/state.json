@@ -1,0 +1,742 @@
+{
+    "cleaned": false,
+    "files": {
+        "Art3DC++.cpp": {
+            "size": 1046,
+            "mtime": 1781371159.7789264,
+            "sha256": "ba27b571476e099f5feb1b47e7704c202d958f89ac162fa4e9a03b626e492b18"
+        },
+        "Art3DC++.slnx": {
+            "size": 214,
+            "mtime": 1781370209.2064774,
+            "sha256": "4968b994a57ed6f757766aa4b391a40506fc480039d76402c5dbf1e390e4a4e7"
+        },
+        "Art3DC++.vcxproj": {
+            "size": 9949,
+            "mtime": 1781370174.130803,
+            "sha256": "c8e23a5efaa04f1a9e2c83fdadb8cae80dd58786effe1579edc6b8c142f83dc9"
+        },
+        "Art3DC++.vcxproj.filters": {
+            "size": 1692,
+            "mtime": 1781368242.2467327,
+            "sha256": "85526b15912232384bc655ff5dbab2bd124e40596e9f7fa7d656c7469928c4cc"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/Cl.items.tlog": {
+            "size": 108,
+            "mtime": 1781367985.6461108,
+            "sha256": "3cbb487e7225b40d419735985a73a48c7c8f156660c4a25ff59ce97cd5a8e2c8"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.write.1.tlog": {
+            "size": 2,
+            "mtime": 1781368242.5669715,
+            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.compat.ixx.ifc.dt.module.json.command": {
+            "size": 3970,
+            "mtime": 1781182056.1350596,
+            "sha256": "289be25b76231577e7e4ccba679298731513c3e4c03071ea74abcd5fc55e69a5"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.isense.dt.command": {
+            "size": 3790,
+            "mtime": 1781182058.743452,
+            "sha256": "b6ed3a01208601a1804330de744384b0407728bc1ce165f328145d3d2061e9b7"
+        },
+        "Art3DC++/x64/Debug/vc145.idb": {
+            "size": 191488,
+            "mtime": 1781367985.395058,
+            "sha256": "579c421d8627a4221a42d7c3a48f36f38f449d8f9bc487be334b1cf7b39a0fdc"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/Art3DC++.lastbuildstate": {
+            "size": 275,
+            "mtime": 1781367985.6461108,
+            "sha256": "94e57996841b35e1f3cf6311317ee373a3d65192e6d84747e2d9d07d1f713ffa"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/CL.write.1.tlog": {
+            "size": 466,
+            "mtime": 1781367985.4657514,
+            "sha256": "715f5a49ad0de4ac31cf23756be1e9995bd95026464a3b8149f2b2d0514e30be"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.obj": {
+            "size": 89498,
+            "mtime": 1781367985.4446702,
+            "sha256": "5b0e05531be60a1bd7391e7678451ea0459aedb08975b4c20aeecec7186f80fe"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.exe.recipe": {
+            "size": 296,
+            "mtime": 1781367985.635836,
+            "sha256": "1e7074fe2c360229c212840b9958101adaa1104ae05b4bf6bbc3daecf9319796"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/CL.command.1.tlog": {
+            "size": 756,
+            "mtime": 1781367985.469349,
+            "sha256": "9ab2a5acbcba07d3ab6dc42f5ef82928c1fe86ed3520b1e158464ae9944f4142"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/CL.read.1.tlog": {
+            "size": 24156,
+            "mtime": 1781367985.466756,
+            "sha256": "fad961a6b42b3c9b7658a1ad32b7e8ab5a187a778b266fb5761a047e5a8b1ac6"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.dt.module.json": {
+            "size": 780,
+            "mtime": 1781182056.3013256,
+            "sha256": "308981ecddd8b51cfb826963c40075e6aa5fdfc2ec41fdfb147befcda5a49d9b"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.compat.ixx.ifc.dt.module.json": {
+            "size": 917,
+            "mtime": 1781182056.1612885,
+            "sha256": "8b39fe88c04edc4f77a8e07070bd0ba944f8902ad2f77da0a6710f79c83b2d3e"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.isense.dt": {
+            "size": 31673825,
+            "mtime": 1781182060.9120505,
+            "sha256": "80958b6d889a604cf64f79f9e00a130f51886f0d7517875de233a7e56a39815c"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.compat.ixx.ifc.dt.d.json": {
+            "size": 317,
+            "mtime": 1781182056.1622884,
+            "sha256": "5c10f187870f84e9d4d1b2208fea30df935180d1254fb76fbd132b552d626c9a"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.dt": {
+            "size": 31674025,
+            "mtime": 1781182058.68776,
+            "sha256": "00db06c22fab968df31c4b2c4f43a5c08c39b57738f006199ca6c91c32be3a09"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.dt.d.json": {
+            "size": 28387,
+            "mtime": 1781182058.6883426,
+            "sha256": "2ddb1ec0513796982cd37de39b2a9ec4317e921303b97152e039f7de447a04c0"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.read.1.tlog": {
+            "size": 2,
+            "mtime": 1781368242.5669715,
+            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.log": {
+            "size": 117,
+            "mtime": 1781368242.565392,
+            "sha256": "1fc5fe2daddf14c86a2d97f23dfc78f3e508cadf08e6300a7bb0a6f134519ca4"
+        },
+        "Art3DC++/x64/Debug/vc145.pdb": {
+            "size": 471040,
+            "mtime": 1781367985.4446702,
+            "sha256": "fb0c59aca068bc65e5280dd3ac8f0e5457418fc342230cf14bfa392f9c5ece0f"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.dt.command": {
+            "size": 3736,
+            "mtime": 1781182056.445376,
+            "sha256": "6e88c080434f06f91a3665adc9fd703e9c2d90b9a51cc1ce3f0d569a9fe2398d"
+        },
+        "x64/Debug/Art3DC++.pdb": {
+            "size": 1298432,
+            "mtime": 1781368242.5529914,
+            "sha256": "0aea8306456c58a0deb229f32959d37453ce6ca997e07d8ca2d5279c6e3bf900"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.secondary.1.tlog": {
+            "size": 129,
+            "mtime": 1781367985.6169758,
+            "sha256": "98cca7e847703418bccd58d27310ecc6229b53dd2b953293a261d2838807cfcb"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.command.1.tlog": {
+            "size": 1266,
+            "mtime": 1781367985.6240275,
+            "sha256": "f5bdc45e0cea86985dcd6c2336a4762317264303d923a157797435cab4742921"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.isense.dt.d.json": {
+            "size": 28387,
+            "mtime": 1781182060.9124892,
+            "sha256": "2ddb1ec0513796982cd37de39b2a9ec4317e921303b97152e039f7de447a04c0"
+        },
+        "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.dt.module.json.command": {
+            "size": 3928,
+            "mtime": 1781182056.1350596,
+            "sha256": "ca86f6dc7e66d0cf2e692d8537785417f6a58eefe4c7987caf6083b0ecdb0970"
+        },
+        "include/SDL3/SDL_opengles.h": {
+            "size": 1244,
+            "mtime": 1767235698.0,
+            "sha256": "d0bec38800302d14ae08dfd3afc3a26d409c95555d77ace5efb64ebfaecb2b08"
+        },
+        "include/SDL3/SDL_bits.h": {
+            "size": 4352,
+            "mtime": 1774176774.0,
+            "sha256": "028c845f51fe13238072778a282514f824d24622f4af0b0af63a3811271d0912"
+        },
+        "include/SDL3/SDL_close_code.h": {
+            "size": 1567,
+            "mtime": 1767235698.0,
+            "sha256": "67aeed66c5310ac5dc62bc0f1c03713719f28529033cde6bb668d5964d179c27"
+        },
+        "include/SDL3/SDL_opengles2.h": {
+            "size": 1615,
+            "mtime": 1767235698.0,
+            "sha256": "cf3445a371fbe8ed9d1c03c929e050d21e450e853f9c9cde8ed3f7dedb442552"
+        },
+        "include/SDL3/SDL_locale.h": {
+            "size": 4524,
+            "mtime": 1771559176.0,
+            "sha256": "a65538f0a78a6fc5477c41a0ef359c8b57eacf03c2998d48cac48dd7645bd6f8"
+        },
+        "art.libs/x64/SDL3_image.lib": {
+            "size": 23232,
+            "mtime": 1777639732.0,
+            "sha256": "ba19e1fceadbf5437165c842fa71d3513e7f15db72a09db0a63754b2210133d4"
+        },
+        "include/SDL3/SDL_clipboard.h": {
+            "size": 12441,
+            "mtime": 1776557202.0,
+            "sha256": "6351b0b419168c98f95d2f131bc2f2208fbe0171ab32085488d25adffe8f6e37"
+        },
+        "Art3DC++.obj": {
+            "size": 19080,
+            "mtime": 1781371162.736266,
+            "sha256": "dd915d25f28ddd3732984619415357ad6f492fcc0466ee2abba83e8109b458b7"
+        },
+        "include/SDL3/SDL_keyboard.h": {
+            "size": 21492,
+            "mtime": 1767235698.0,
+            "sha256": "b7664fb34abcf86f669edf4fd5fdef2d58fa025f49d91b4743888f192c519d8d"
+        },
+        "include/SDL3/SDL_test_crc32.h": {
+            "size": 3614,
+            "mtime": 1767235698.0,
+            "sha256": "7d5b4fc7c7bea9e7355198c1b479700ce078a0e2a6aad4ef1cdd767c06407c16"
+        },
+        "include/SDL3/SDL_gamepad.h": {
+            "size": 59615,
+            "mtime": 1778510738.0,
+            "sha256": "55350e07e9569d70a25643e578edb53bce60867aebb2a3550b00250033f60a8b"
+        },
+        "include/SDL3/SDL_version.h": {
+            "size": 5810,
+            "mtime": 1780198720.0,
+            "sha256": "ed082eea3bc472409d4bca0fc4e0d8fe50c969f5fd91717844f20480b1d4932c"
+        },
+        "include/SDL3/SDL_properties.h": {
+            "size": 20371,
+            "mtime": 1771419084.0,
+            "sha256": "f66e621b2b9d7d9c8126bfbc31a50f90f515ddf9e090b6e1cc6ea24b343bdd4a"
+        },
+        "include/SDL3/SDL_video.h": {
+            "size": 142159,
+            "mtime": 1767235698.0,
+            "sha256": "e4a25b506dfb5b0657edc264b7130cfea3bad0abc0265e280e046f9ec4dcaeaf"
+        },
+        "include/SDL3/SDL_test_md5.h": {
+            "size": 4633,
+            "mtime": 1767235698.0,
+            "sha256": "6df30087ddab5d65f291d7f3faa7000eb88ba64c66e971112a8adaf085e9b6dd"
+        },
+        "SDL3_ttf.dll": {
+            "size": 2021888,
+            "mtime": 1743420536.0,
+            "sha256": "95a20af07f194f057b6e778bee0ce608d3c90c3dbd64a4b5120dc4879f43a6be"
+        },
+        "include/SDL3/SDL_render.h": {
+            "size": 127837,
+            "mtime": 1771617812.0,
+            "sha256": "29b5c4a477bf5d20043ed58cd3d32cc71d2ea435edde85cbfeeee94d608d626f"
+        },
+        "include/SDL3/SDL_test_common.h": {
+            "size": 8804,
+            "mtime": 1767235698.0,
+            "sha256": "8c0c8f322c93a76beebcb69bd73526a0cd8841532c8f8926e61956b8ae881623"
+        },
+        "art.libs/x64/SDL3_test.lib": {
+            "size": 838574,
+            "mtime": 1780224822.0,
+            "sha256": "f456ac1ce0f41d6d0e947f7614368dc3cbb76cc9cf11d6809e26536f4c411c96"
+        },
+        "include/SDL3/SDL_scancode.h": {
+            "size": 17246,
+            "mtime": 1767235698.0,
+            "sha256": "d5e3bb25b523b61ed354189919f2bcb058f0f2fa08e0529ce8e21480937c8ca5"
+        },
+        "include/SDL3/SDL_vulkan.h": {
+            "size": 11897,
+            "mtime": 1749695526.0,
+            "sha256": "a0d1b8c6a2a7982e419dbdb8ea60fce09e99390238634ca117d82442953a4e1c"
+        },
+        "include/SDL3/SDL_iostream.h": {
+            "size": 53548,
+            "mtime": 1767235698.0,
+            "sha256": "81f8719b82f61d00a96dac7b97313115172e82e05361878dbcbaad96e334aed8"
+        },
+        "include/SDL3/SDL_opengles2_khrplatform.h": {
+            "size": 11131,
+            "mtime": 1669475718.0,
+            "sha256": "7b1e01aaa7ad8f6fc34b5c7bdf79ebf5189bb09e2c4d2e79fc5d350623d11e83"
+        },
+        "include/SDL3/SDL_hints.h": {
+            "size": 168894,
+            "mtime": 1777963900.0,
+            "sha256": "58235988673a629b1ce223c25ab93939597ce41ebb6147badf08fec2bf7dced2"
+        },
+        "include/SDL3/SDL_main_impl.h": {
+            "size": 5846,
+            "mtime": 1767235698.0,
+            "sha256": "e2084e6e8ca5ef1c6948ae2de406e82c0df45bf910c90260433abaa24f232970"
+        },
+        "include/SDL3/SDL_test_assert.h": {
+            "size": 3196,
+            "mtime": 1767235698.0,
+            "sha256": "016c81211ca7d724e7482d55914900ec25d72efe3117e363f069aa7ae167866a"
+        },
+        "include/SDL3/SDL_sensor.h": {
+            "size": 10498,
+            "mtime": 1767235698.0,
+            "sha256": "8c91002fc95799b820d07671541c97c012f77bcf8eb16f624e717142fa051c72"
+        },
+        "include/SDL3/SDL_platform.h": {
+            "size": 1963,
+            "mtime": 1771419084.0,
+            "sha256": "9a95a10a7f3c3d8f4958ebaded5c5e3b154f75c7351b1002e32429bc7dd28501"
+        },
+        "include/SDL3/SDL_opengl_glext.h": {
+            "size": 864070,
+            "mtime": 1779010230.0,
+            "sha256": "1abb28891c9b0661b6ff3749de2671da5fe12beb5bcb1833b2d6bdf5c89ecdf8"
+        },
+        "Art3DC++.pdb": {
+            "size": 14036992,
+            "mtime": 1781371162.770827,
+            "sha256": "178c82d93a5792953ed15b448b5f400d1040ac86316cb31ae567f173d71b9588"
+        },
+        "include/SDL3/SDL_test_compare.h": {
+            "size": 2778,
+            "mtime": 1767235698.0,
+            "sha256": "d4f06234ec5734cea2ecfe0513cb6ecd1c7e13b3bd04a5f5940763dfd0b9c140"
+        },
+        "include/SDL3/SDL_oldnames.h": {
+            "size": 80730,
+            "mtime": 1772525442.0,
+            "sha256": "59cb5dde7a441d0b208c52f12f73a949dd747ce6b053f31b356cb64cef20e6dc"
+        },
+        "include/SDL3/SDL_power.h": {
+            "size": 4229,
+            "mtime": 1771559176.0,
+            "sha256": "ed0346c3c7454da4e305feb5a650a0859053442c68b388dc60848e002b86f3e2"
+        },
+        "include/SDL3_ttf/SDL_ttf.h": {
+            "size": 102149,
+            "mtime": 1743393246.0,
+            "sha256": "e9bb02094a7751cded0a9fb45f1c3b4edd35f9457c6eb6b960dd5d163a5104bd"
+        },
+        "include/SDL3/SDL_begin_code.h": {
+            "size": 18082,
+            "mtime": 1771901348.0,
+            "sha256": "00e0196d5356ca8c38557d8d473c78735aacb4412ba0c6d1012e8df387270e28"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/unsuccessfulbuild": {
+            "size": 0,
+            "mtime": 1781368242.4811873,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "SDL3.dll": {
+            "size": 2804736,
+            "mtime": 1780224822.0,
+            "sha256": "c39fbda24eca1009b06a4d4e340d12511e3c8b0d44c4898d29e336e2cc7a25f0"
+        },
+        "include/SDL3/SDL_metal.h": {
+            "size": 3354,
+            "mtime": 1771559176.0,
+            "sha256": "0689f189d73dc0b9b314013f77505cbeca10d96b23556a057ee8d676b46d8983"
+        },
+        "include/SDL3/SDL_gpu.h": {
+            "size": 181772,
+            "mtime": 1771617812.0,
+            "sha256": "5ff0919a6bb969100c36a6f92713362b005bcf24bb56bcd7d04ad17b91160efa"
+        },
+        "include/SDL3/SDL_opengles2_gl2platform.h": {
+            "size": 646,
+            "mtime": 1669475718.0,
+            "sha256": "4779be999acd1904458238f09c86983b7960ac40e612e05db2db97db615f1e0f"
+        },
+        "include/SDL3/SDL_intrin.h": {
+            "size": 13860,
+            "mtime": 1772004612.0,
+            "sha256": "66f00cfb3259e0207d32d608bc326f2aeb25fc96d5223e26ff5501d0efc5bd82"
+        },
+        "include/SDL3/SDL_hidapi.h": {
+            "size": 22043,
+            "mtime": 1767235698.0,
+            "sha256": "129fcc4b99aca44a30dccb0d1c653c1a0b018f3e57d3547c414c81db7de508af"
+        },
+        "include/SDL3/SDL_init.h": {
+            "size": 20850,
+            "mtime": 1771419084.0,
+            "sha256": "54f65b10221de0e1ee59b99d01661a56472bc9abb05690c0d5bd787670965a8d"
+        },
+        "include/SDL3/SDL_opengles2_gl2.h": {
+            "size": 42938,
+            "mtime": 1669475718.0,
+            "sha256": "d6ec44b1d73f3afce3a20ac6976db7fb3dac656c5190f0b563e4ce90d79a15aa"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.1.tlog": {
+            "size": 2,
+            "mtime": 1781368242.5669715,
+            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+        },
+        "include/SDL3/SDL_filesystem.h": {
+            "size": 22921,
+            "mtime": 1771617812.0,
+            "sha256": "594df8cacd921611186fe9251c4771bb5a9733d36bdd3e821c2fd9382857097a"
+        },
+        "include/SDL3/SDL_keycode.h": {
+            "size": 26697,
+            "mtime": 1767235698.0,
+            "sha256": "82c54f5b995c952d6bda3dae6a409d0115b604ee17da3c77de8fe62dbb9c8e60"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.2.tlog": {
+            "size": 2,
+            "mtime": 1781368242.5669715,
+            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+        },
+        "include/SDL3/SDL_opengles2_gl2ext.h": {
+            "size": 241221,
+            "mtime": 1669475718.0,
+            "sha256": "4fc5b0034dcde9c125922e3e70d01489a6b335076856ee660294e1a6305a3719"
+        },
+        "include/SDL3/SDL_rect.h": {
+            "size": 19081,
+            "mtime": 1771617812.0,
+            "sha256": "f5a5c39fbffd41eadbeb50e2ddfa4ffe655ff14241a23e4f20de4cce48e82d6e"
+        },
+        "include/SDL3/SDL_dlopennote.h": {
+            "size": 8786,
+            "mtime": 1767235698.0,
+            "sha256": "10449e075868d279114658d3024300b1e59d42ec98cb2374949ba18478544df4"
+        },
+        "include/SDL3/SDL.h": {
+            "size": 2986,
+            "mtime": 1780198720.0,
+            "sha256": "99cfa6d497d1f2bbf973ad0581333e9895f28737b50d4d0cc2d22cdd40c4d11d"
+        },
+        "include/SDL3_ttf/SDL_textengine.h": {
+            "size": 7055,
+            "mtime": 1738216808.0,
+            "sha256": "524dbb153cec5a86324a928cd60930081fecbd2c6c706562b8ccdc6bdde02cff"
+        },
+        "include/SDL3/SDL_misc.h": {
+            "size": 2919,
+            "mtime": 1771559176.0,
+            "sha256": "3302ddfec11a0f2a1d9e0eda88f6f23ca189cf93d401a01ca826bfcad160e6ec"
+        },
+        "vcxproj_raw.txt": {
+            "size": 7898,
+            "mtime": 1781370050.385718,
+            "sha256": "8e91b3741adedeee50da491d6bb2b51e64f0f4e0a1e7e797eebdd9f1dd89954a"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.3.tlog": {
+            "size": 2,
+            "mtime": 1781368242.5669715,
+            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+        },
+        "art.libs/x64/SDL3_ttf.pdb": {
+            "size": 18280448,
+            "mtime": 1743420536.0,
+            "sha256": "6248266a35fa4b7041fc4dbd34062a8b90eee2e2b5f33616932a755411f62594"
+        },
+        "include/SDL3/SDL_stdinc.h": {
+            "size": 205971,
+            "mtime": 1780156212.0,
+            "sha256": "e0d5fca5b28872c2bb67daed0d4c3ad38d349a5a790b85193f02b917f941ce35"
+        },
+        "include/SDL3/SDL_events.h": {
+            "size": 71634,
+            "mtime": 1778634762.0,
+            "sha256": "bb51b7035b41462b8040ce17677fddc90dd0a1ff3ecd8e97086f474f0be9baa1"
+        },
+        "art.libs/x64/SDL3_ttf.dll": {
+            "size": 2021888,
+            "mtime": 1743420536.0,
+            "sha256": "95a20af07f194f057b6e778bee0ce608d3c90c3dbd64a4b5120dc4879f43a6be"
+        },
+        "include/SDL3/SDL_time.h": {
+            "size": 8739,
+            "mtime": 1771419084.0,
+            "sha256": "db6dd02434f0b099748e728d1145486888659087e7742f7367da9e4d1120c771"
+        },
+        "include/SDL3/SDL_messagebox.h": {
+            "size": 8178,
+            "mtime": 1771559176.0,
+            "sha256": "124139156dc7887b3f6fc5f8dfd45b9711d4d834204baa20dec89aebba522918"
+        },
+        "include/SDL3/SDL_main.h": {
+            "size": 27472,
+            "mtime": 1771980050.0,
+            "sha256": "cc1b4a1ad67b6e090951babc392548ce9cd7e5a33618f262f567a51659239ff9"
+        },
+        "include/SDL3/SDL_cpuinfo.h": {
+            "size": 11359,
+            "mtime": 1767235698.0,
+            "sha256": "9307452eccae54d8bf35dff79daa2e804e29f244e2208c5e7932dfadcf3e8c12"
+        },
+        "include/SDL3/SDL_test_font.h": {
+            "size": 5505,
+            "mtime": 1767235698.0,
+            "sha256": "14079a136e0399c71e6b148ce80c6a9b0e392cc1851c6ce8ef7736d4b0c9b42b"
+        },
+        "include/SDL3/SDL_blendmode.h": {
+            "size": 9342,
+            "mtime": 1767235698.0,
+            "sha256": "3a3e25b43bb2ab520b59a50c101a06f4ce17af27e2250a4dfd6cb296c973c3d1"
+        },
+        "include/SDL3/SDL_endian.h": {
+            "size": 20162,
+            "mtime": 1772004612.0,
+            "sha256": "19405eb59c29e5a4eb69afdcf3c38bd678fcf5660a529ec0b8015a82ba602d91"
+        },
+        "include/SDL3/SDL_test_log.h": {
+            "size": 2571,
+            "mtime": 1767235698.0,
+            "sha256": "001e91743189c4468dd3e93afcb4ccd55f09bd28ed794611323bee41530c7ff7"
+        },
+        "art.libs/x64/SDL3.dll": {
+            "size": 2804736,
+            "mtime": 1780224822.0,
+            "sha256": "c39fbda24eca1009b06a4d4e340d12511e3c8b0d44c4898d29e336e2cc7a25f0"
+        },
+        "include/SDL3/SDL_mouse.h": {
+            "size": 31719,
+            "mtime": 1767235698.0,
+            "sha256": "6caff19a4841afc5cab4254e94a73de874a331a6539f87d2d2c61a7c5e5d7e5b"
+        },
+        "include/SDL3/SDL_joystick.h": {
+            "size": 51596,
+            "mtime": 1767235698.0,
+            "sha256": "de936f3314f39bb02aaf3afc758aa3af7cf5cd2152c2265369d7dc5abca1f1bb"
+        },
+        "SDL3_image.dll": {
+            "size": 384512,
+            "mtime": 1777639732.0,
+            "sha256": "8ffbeafa9ba9f28de150b9bb45cc045de335b3251725f95aa708848ce37f3a74"
+        },
+        "include/SDL3/SDL_asyncio.h": {
+            "size": 23450,
+            "mtime": 1771419084.0,
+            "sha256": "acec5e4c8cbcfe8dc371adb63ad986ff3521685bca9b683ac4cc18ed13b1e840"
+        },
+        "include/SDL3/SDL_atomic.h": {
+            "size": 26023,
+            "mtime": 1777275068.0,
+            "sha256": "2e12f9943e8f1b7ca3488a75541a15a4ef9fe0a945b6a3f5196578dea46b98db"
+        },
+        "art.libs/x64/SDL3_image.pdb": {
+            "size": 4460544,
+            "mtime": 1777639732.0,
+            "sha256": "a4eea8858941845f6725d2cf78129e00ae5d7cde8a77aa49d54a30c42eb5e2e9"
+        },
+        "include/SDL3/SDL_surface.h": {
+            "size": 70993,
+            "mtime": 1767235698.0,
+            "sha256": "8c4c6f4127b663b38167be0e431a6015533d9b792f8df42e213b8ec9a1d3ba96"
+        },
+        "art.libs/x64/SDL3_ttf.lib": {
+            "size": 28030,
+            "mtime": 1743420536.0,
+            "sha256": "369868fd3eebd3e2131da827ae7233cc7a08a86756adc4c2c8ad900824bbd017"
+        },
+        "include/SDL3_image/SDL_image.h": {
+            "size": 116258,
+            "mtime": 1777610816.0,
+            "sha256": "1ded639ab7a8f2b605c655034df397307f0b21dba09696bfe8a02f3404a6705c"
+        },
+        "include/SDL3/SDL_pen.h": {
+            "size": 8289,
+            "mtime": 1771617812.0,
+            "sha256": "30cf6dacd1a7ce079c4c2e53df32f85ecdf1f4056fce08089abc26208bb32055"
+        },
+        "include/SDL3/SDL_process.h": {
+            "size": 18490,
+            "mtime": 1767235698.0,
+            "sha256": "a52b5af99b1130189c3510269ba73d8288b55feb4b7086a1614cfad395794655"
+        },
+        "include/SDL3/SDL_platform_defines.h": {
+            "size": 12169,
+            "mtime": 1767235698.0,
+            "sha256": "ab5692c00d4aca81466688a6c9abe7f5154070b6118f48a67490d81dff6ad36e"
+        },
+        "include/SDL3/SDL_error.h": {
+            "size": 7095,
+            "mtime": 1767235698.0,
+            "sha256": "c3fb65e2899d341f84ab3a0bbe99646d51efab252290fff28ce36ffc7b5f9a34"
+        },
+        "include/SDL3/SDL_guid.h": {
+            "size": 3430,
+            "mtime": 1767235698.0,
+            "sha256": "556ed320776337ef8af8fada3e3fe4a795dddc2abfb7f4813830acb3272d879e"
+        },
+        "art.libs/x64/SDL3_image.dll": {
+            "size": 384512,
+            "mtime": 1777639732.0,
+            "sha256": "8ffbeafa9ba9f28de150b9bb45cc045de335b3251725f95aa708848ce37f3a74"
+        },
+        "include/SDL3/SDL_haptic.h": {
+            "size": 45075,
+            "mtime": 1771617812.0,
+            "sha256": "b44f466ce6ffc44f4390c02c0688b9462ea48c0150373a4187c9c4eaf3829e95"
+        },
+        "include/SDL3/SDL_test_harness.h": {
+            "size": 5374,
+            "mtime": 1767235698.0,
+            "sha256": "81f1fe6472b312b3e0a3394e2cc39ac84ef06655dbf3c1265c5bc01a7c0c0c06"
+        },
+        "include/SDL3/SDL_mutex.h": {
+            "size": 36760,
+            "mtime": 1771617812.0,
+            "sha256": "c0218aeee31ba40f4f2990dfff5184d22cdd39907da834027d31f75f3a50a32e"
+        },
+        "include/SDL3/SDL_storage.h": {
+            "size": 25967,
+            "mtime": 1771617812.0,
+            "sha256": "fbb7342d44526e0bb683fb645910eb1d3fcffd1468b9c823b0654ef424ba60f0"
+        },
+        "include/SDL3/SDL_egl.h": {
+            "size": 108941,
+            "mtime": 1767235698.0,
+            "sha256": "f477f952afad531447dc644d95fb564505d4c2c11d3e246a1affbceabaf779bc"
+        },
+        "include/SDL3/SDL_opengl.h": {
+            "size": 126683,
+            "mtime": 1767235698.0,
+            "sha256": "a8e7681bfff83d2156b4f088b792789c30da791ce4581c7ae64545e80a3522a1"
+        },
+        "include/SDL3/SDL_system.h": {
+            "size": 30121,
+            "mtime": 1771559176.0,
+            "sha256": "81d78f7a087bb1d122565b2310ad139a3672d372e3d1c4a615b00c2403edeb90"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.4.tlog": {
+            "size": 2,
+            "mtime": 1781368242.5669715,
+            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+        },
+        "vc140.pdb": {
+            "size": 135168,
+            "mtime": 1781371162.727765,
+            "sha256": "0234045aa8b73a65c384c63f1900f1aa4dd0c24d77edadb0d2e058547a5afe5b"
+        },
+        "include/SDL3/SDL_copying.h": {
+            "size": 984,
+            "mtime": 1767235698.0,
+            "sha256": "b5113ee040521690fecda79e1e00d078166d2ec2632153a8ee498f3bcbf40886"
+        },
+        "include/SDL3/SDL_loadso.h": {
+            "size": 5182,
+            "mtime": 1767235698.0,
+            "sha256": "14246190e220d2ec52c40a586ceb571ee928215d09e1d82b260675da3a94634f"
+        },
+        "include/SDL3/SDL_test.h": {
+            "size": 1954,
+            "mtime": 1767235698.0,
+            "sha256": "6d16a15e84da000b0015aebd50ded8f30e519ebcbc02f02a0b8c0f0079cbd86e"
+        },
+        "include/SDL3/SDL_test_fuzzer.h": {
+            "size": 13205,
+            "mtime": 1767235698.0,
+            "sha256": "ad78531a4fe77dbff98fe0d9183ee09622a322d0ecff27aa1fdc07acba99d3b1"
+        },
+        "include/SDL3/SDL_revision.h": {
+            "size": 2043,
+            "mtime": 1780198720.0,
+            "sha256": "38cfdceac8ec81295159f2c1439ff8b115686bd40ed25524df3bcd493b276186"
+        },
+        "include/SDL3/SDL_touch.h": {
+            "size": 6353,
+            "mtime": 1767235698.0,
+            "sha256": "e69c97c2fc210f1e8eab7199173097b4f4196a3ea4a39e1d08a48a145cc92132"
+        },
+        "art.libs/x64/SDL3.lib": {
+            "size": 283572,
+            "mtime": 1780224822.0,
+            "sha256": "04c41f986a80243d1048ed026c0a145515140c99f8c895710083c3da27d4c03a"
+        },
+        "include/SDL3/SDL_timer.h": {
+            "size": 14683,
+            "mtime": 1767235698.0,
+            "sha256": "60a809df30e0c549a91b986f517ff94515ab80a529db95d97655a2c417f0f927"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.write.1.tlog": {
+            "size": 2,
+            "mtime": 1781368242.5663998,
+            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+        },
+        "Art3DC++.exe": {
+            "size": 738816,
+            "mtime": 1781371162.771467,
+            "sha256": "e43af3762fb56da9e38635791a608e6877fbbc9eb2344d1cbc1033e80fddc6f7"
+        },
+        "art.libs/x64/SDL3.pdb": {
+            "size": 14684160,
+            "mtime": 1780224822.0,
+            "sha256": "dfe9ff36d6e978325d247b60211ef7e7eada8099293dcb1c307a8b5cb6d41d0e"
+        },
+        "include/SDL3/SDL_camera.h": {
+            "size": 21110,
+            "mtime": 1767235698.0,
+            "sha256": "d0599a5549ecc8ba479427fb8ca9ce44a712b19b473a2e6103399a990153d658"
+        },
+        "include/SDL3/SDL_dialog.h": {
+            "size": 14538,
+            "mtime": 1767235698.0,
+            "sha256": "b81aaf26316299bd9bfb1017c48a5d4b6fe525c64d0058821b70b3223df579db"
+        },
+        "include/SDL3/SDL_tray.h": {
+            "size": 17471,
+            "mtime": 1767235698.0,
+            "sha256": "00fe9d97cef15acc3adb18a85689a619178c74df12990090da475c4f7e0e12a1"
+        },
+        "include/SDL3/SDL_test_memory.h": {
+            "size": 1942,
+            "mtime": 1767235698.0,
+            "sha256": "70cf38368fbf637e191933138a9663097ed22579b73b2382d3290b753c8300c6"
+        },
+        "include/SDL3/SDL_assert.h": {
+            "size": 28030,
+            "mtime": 1779257010.0,
+            "sha256": "f64bd68f3ba36b2d3bf015370c67352fd414bbc26c9d2f7d731f244d3e5f0ecf"
+        },
+        "Art3DC++.ilk": {
+            "size": 2649308,
+            "mtime": 1781371162.778661,
+            "sha256": "e81ce258aa6b6dd1974f86d9a659304e472fbc6c2c0868c000fe9de4b515a96f"
+        },
+        "include/SDL3/SDL_log.h": {
+            "size": 16982,
+            "mtime": 1771617812.0,
+            "sha256": "15f28418f4fe636b41f78541bd73217c32ec0e11a2ef0f39c2ba8033fc3702cf"
+        },
+        "include/SDL3/SDL_pixels.h": {
+            "size": 59712,
+            "mtime": 1767235698.0,
+            "sha256": "a4c17ec0b7bd9ddd631cad62cb38bae7d3e1f2b9522914a816a5e86433691ade"
+        },
+        "include/SDL3/SDL_thread.h": {
+            "size": 23725,
+            "mtime": 1771617812.0,
+            "sha256": "b5f2b2d88729338cb0c1e95398f112bccbb343fcf960e2dae080e3695be1be76"
+        },
+        "include/SDL3/SDL_audio.h": {
+            "size": 97988,
+            "mtime": 1779764252.0,
+            "sha256": "f2ee08f08ac918f9960005b37200c0dd9c2fa13be3418c0960ea3f87ee13498d"
+        }
+    },
+    "dirs": [
+        "x64",
+        "Art3DC++/x64/Debug/microsoft/STL",
+        "Art3DC++/x64/Debug/Art3DC++_MD.tlog",
+        "Art3DC++/x64/Debug/Art3DC++.tlog",
+        "x64/Debug",
+        "Art3DC++/x64/Debug",
+        "Art3DC++",
+        "Art3DC++/x64",
+        "Art3DC++/x64/Debug/microsoft",
+        "include/SDL3_ttf",
+        "include",
+        "include/SDL3",
+        "include/SDL3_image",
+        "art.libs/x64",
+        "art.libs"
+    ]
+}
