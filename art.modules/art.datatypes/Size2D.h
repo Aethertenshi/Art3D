@@ -1,6 +1,6 @@
-export module Size2D;
+#pragma once
 
-export struct Size2D
+struct Size2D
 {
 public:
     int ScaleX;

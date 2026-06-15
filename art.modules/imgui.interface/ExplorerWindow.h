@@ -1,14 +1,11 @@
-module;
+#pragma once
 #include "imgui.h"
 #include <vector>
 #include <memory>
 #include <string>
+#include "../art.datatypes/GameObject.h"
 
-export module ExplorerWindow;
-
-import GameObject;
-
-export class ExplorerWindow
+class ExplorerWindow
 {
 private:
     void DrawNode(GameObject* node, GameObject*& selectedObject) {
@@ -46,6 +43,11 @@ public:
         ImGui::SetNextWindowSize(ImVec2(320, 720), ImGuiCond_FirstUseEver);
 
         if (ImGui::Begin("Hierarchy Explorer")) {
+            // Deselect if user left-clicks on empty space in the window
+            if (ImGui::IsWindowHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left) && !ImGui::IsAnyItemHovered()) {
+                selectedObject = nullptr;
+            }
+
             for (auto& obj : rootObjects) {
                 DrawNode(obj.get(), selectedObject);
             }

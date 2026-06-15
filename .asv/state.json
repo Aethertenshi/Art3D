@@ -2,9 +2,9 @@
     "cleaned": false,
     "files": {
         "Art3DC++.cpp": {
-            "size": 1046,
-            "mtime": 1781371159.7789264,
-            "sha256": "ba27b571476e099f5feb1b47e7704c202d958f89ac162fa4e9a03b626e492b18"
+            "size": 67134,
+            "mtime": 1781484759.140744,
+            "sha256": "ab615e543c125b081f283e086481acddf675662da30104a1a40806e9ce09c67d"
         },
         "Art3DC++.slnx": {
             "size": 214,
@@ -12,9 +12,9 @@
             "sha256": "4968b994a57ed6f757766aa4b391a40506fc480039d76402c5dbf1e390e4a4e7"
         },
         "Art3DC++.vcxproj": {
-            "size": 9949,
-            "mtime": 1781370174.130803,
-            "sha256": "c8e23a5efaa04f1a9e2c83fdadb8cae80dd58786effe1579edc6b8c142f83dc9"
+            "size": 10146,
+            "mtime": 1781484882.9876213,
+            "sha256": "317008d5abbf761691955ba3afac34c20529575179b103da3a0696890a35b387"
         },
         "Art3DC++.vcxproj.filters": {
             "size": 1692,
@@ -22,14 +22,14 @@
             "sha256": "85526b15912232384bc655ff5dbab2bd124e40596e9f7fa7d656c7469928c4cc"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/Cl.items.tlog": {
-            "size": 108,
-            "mtime": 1781367985.6461108,
-            "sha256": "3cbb487e7225b40d419735985a73a48c7c8f156660c4a25ff59ce97cd5a8e2c8"
+            "size": 1078,
+            "mtime": 1781484987.000934,
+            "sha256": "261e578c9540e9a76f3b1864aaba2d01d57a3aca763f394af989557165bfd277"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/link.write.1.tlog": {
-            "size": 2,
-            "mtime": 1781368242.5669715,
-            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+            "size": 1418,
+            "mtime": 1781484986.9430726,
+            "sha256": "3ef8e6ad9c51f4d1bb89c1bfc9eb458d790e38c7dc05d444ad31c938e9747168"
         },
         "Art3DC++/x64/Debug/microsoft/STL/std.compat.ixx.ifc.dt.module.json.command": {
             "size": 3970,
@@ -42,24 +42,24 @@
             "sha256": "b6ed3a01208601a1804330de744384b0407728bc1ce165f328145d3d2061e9b7"
         },
         "Art3DC++/x64/Debug/vc145.idb": {
-            "size": 191488,
-            "mtime": 1781367985.395058,
-            "sha256": "579c421d8627a4221a42d7c3a48f36f38f449d8f9bc487be334b1cf7b39a0fdc"
+            "size": 707584,
+            "mtime": 1781484985.7976747,
+            "sha256": "c05f0a96792dd158fbc0c383829de82758204378f8aa6777669a21ffa02eb489"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/Art3DC++.lastbuildstate": {
             "size": 275,
-            "mtime": 1781367985.6461108,
-            "sha256": "94e57996841b35e1f3cf6311317ee373a3d65192e6d84747e2d9d07d1f713ffa"
+            "mtime": 1781409513.795148,
+            "sha256": "56bc4f0f732d983bed084296efa9d6868824c1ddc256f7ee49ff12b24d874385"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/CL.write.1.tlog": {
-            "size": 466,
-            "mtime": 1781367985.4657514,
-            "sha256": "715f5a49ad0de4ac31cf23756be1e9995bd95026464a3b8149f2b2d0514e30be"
+            "size": 5200,
+            "mtime": 1781484987.010716,
+            "sha256": "1c1e47662c3ca2d0bab1e4c4dbb12932baad437e76083756aeffdee149cfe496"
         },
         "Art3DC++/x64/Debug/Art3DC++.obj": {
-            "size": 89498,
-            "mtime": 1781367985.4446702,
-            "sha256": "5b0e05531be60a1bd7391e7678451ea0459aedb08975b4c20aeecec7186f80fe"
+            "size": 5366013,
+            "mtime": 1781484986.1010787,
+            "sha256": "2e7d81a4b18e2546911eaef4da02b0ef12876640fbcddb337e1c230b5914c155"
         },
         "Art3DC++/x64/Debug/Art3DC++.exe.recipe": {
             "size": 296,
@@ -67,14 +67,14 @@
             "sha256": "1e7074fe2c360229c212840b9958101adaa1104ae05b4bf6bbc3daecf9319796"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/CL.command.1.tlog": {
-            "size": 756,
-            "mtime": 1781367985.469349,
-            "sha256": "9ab2a5acbcba07d3ab6dc42f5ef82928c1fe86ed3520b1e158464ae9944f4142"
+            "size": 9614,
+            "mtime": 1781484986.14184,
+            "sha256": "dbe10f617ca662715d42727c68eca0027e5f625e1dd0296469fdbf02309686a9"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/CL.read.1.tlog": {
-            "size": 24156,
-            "mtime": 1781367985.466756,
-            "sha256": "fad961a6b42b3c9b7658a1ad32b7e8ab5a187a778b266fb5761a047e5a8b1ac6"
+            "size": 164052,
+            "mtime": 1781484987.0101995,
+            "sha256": "7ff3145946edbb265796abdc239dc013a3adf036a38c3d90b0b2918af6e90cb8"
         },
         "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.dt.module.json": {
             "size": 780,
@@ -107,9 +107,9 @@
             "sha256": "2ddb1ec0513796982cd37de39b2a9ec4317e921303b97152e039f7de447a04c0"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/link.read.1.tlog": {
-            "size": 2,
-            "mtime": 1781368242.5669715,
-            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+            "size": 6634,
+            "mtime": 1781484986.9445837,
+            "sha256": "13f5c3a5c7214e37996f945c4734563270dcb1d6f54cfd971812add084e89392"
         },
         "Art3DC++/x64/Debug/Art3DC++.log": {
             "size": 117,
@@ -117,9 +117,9 @@
             "sha256": "1fc5fe2daddf14c86a2d97f23dfc78f3e508cadf08e6300a7bb0a6f134519ca4"
         },
         "Art3DC++/x64/Debug/vc145.pdb": {
-            "size": 471040,
-            "mtime": 1781367985.4446702,
-            "sha256": "fb0c59aca068bc65e5280dd3ac8f0e5457418fc342230cf14bfa392f9c5ece0f"
+            "size": 2830336,
+            "mtime": 1781484986.0589411,
+            "sha256": "30afde5f4f04267920a36c749bce2243969159be656fbc06f6322b05a716f113"
         },
         "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.dt.command": {
             "size": 3736,
@@ -127,19 +127,19 @@
             "sha256": "6e88c080434f06f91a3665adc9fd703e9c2d90b9a51cc1ce3f0d569a9fe2398d"
         },
         "x64/Debug/Art3DC++.pdb": {
-            "size": 1298432,
-            "mtime": 1781368242.5529914,
-            "sha256": "0aea8306456c58a0deb229f32959d37453ce6ca997e07d8ca2d5279c6e3bf900"
+            "size": 18436096,
+            "mtime": 1781484986.9044032,
+            "sha256": "ef087b1e7416d05c6a247d19eb6322fd609b8a60e240d237d5e909b0e292128f"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/link.secondary.1.tlog": {
-            "size": 129,
-            "mtime": 1781367985.6169758,
-            "sha256": "98cca7e847703418bccd58d27310ecc6229b53dd2b953293a261d2838807cfcb"
+            "size": 662,
+            "mtime": 1781484986.9410882,
+            "sha256": "e21bbdc804fcc540ed92c911941e47a64a3b2c8e249760a316e69d05fbf9bc64"
         },
         "Art3DC++/x64/Debug/Art3DC++.tlog/link.command.1.tlog": {
-            "size": 1266,
-            "mtime": 1781367985.6240275,
-            "sha256": "f5bdc45e0cea86985dcd6c2336a4762317264303d923a157797435cab4742921"
+            "size": 3102,
+            "mtime": 1781484986.9455836,
+            "sha256": "556e1f0b641151aa7ecd5ee0adbd92ae5cfa4aa1c98b611c2609a4c6e63055f6"
         },
         "Art3DC++/x64/Debug/microsoft/STL/std.ixx.ifc.isense.dt.d.json": {
             "size": 28387,
@@ -185,11 +185,6 @@
             "size": 12441,
             "mtime": 1776557202.0,
             "sha256": "6351b0b419168c98f95d2f131bc2f2208fbe0171ab32085488d25adffe8f6e37"
-        },
-        "Art3DC++.obj": {
-            "size": 19080,
-            "mtime": 1781371162.736266,
-            "sha256": "dd915d25f28ddd3732984619415357ad6f492fcc0466ee2abba83e8109b458b7"
         },
         "include/SDL3/SDL_keyboard.h": {
             "size": 21492,
@@ -296,11 +291,6 @@
             "mtime": 1779010230.0,
             "sha256": "1abb28891c9b0661b6ff3749de2671da5fe12beb5bcb1833b2d6bdf5c89ecdf8"
         },
-        "Art3DC++.pdb": {
-            "size": 14036992,
-            "mtime": 1781371162.770827,
-            "sha256": "178c82d93a5792953ed15b448b5f400d1040ac86316cb31ae567f173d71b9588"
-        },
         "include/SDL3/SDL_test_compare.h": {
             "size": 2778,
             "mtime": 1767235698.0,
@@ -325,11 +315,6 @@
             "size": 18082,
             "mtime": 1771901348.0,
             "sha256": "00e0196d5356ca8c38557d8d473c78735aacb4412ba0c6d1012e8df387270e28"
-        },
-        "Art3DC++/x64/Debug/Art3DC++.tlog/unsuccessfulbuild": {
-            "size": 0,
-            "mtime": 1781368242.4811873,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "SDL3.dll": {
             "size": 2804736,
@@ -371,11 +356,6 @@
             "mtime": 1669475718.0,
             "sha256": "d6ec44b1d73f3afce3a20ac6976db7fb3dac656c5190f0b563e4ce90d79a15aa"
         },
-        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.1.tlog": {
-            "size": 2,
-            "mtime": 1781368242.5669715,
-            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
-        },
         "include/SDL3/SDL_filesystem.h": {
             "size": 22921,
             "mtime": 1771617812.0,
@@ -385,11 +365,6 @@
             "size": 26697,
             "mtime": 1767235698.0,
             "sha256": "82c54f5b995c952d6bda3dae6a409d0115b604ee17da3c77de8fe62dbb9c8e60"
-        },
-        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.2.tlog": {
-            "size": 2,
-            "mtime": 1781368242.5669715,
-            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
         },
         "include/SDL3/SDL_opengles2_gl2ext.h": {
             "size": 241221,
@@ -420,16 +395,6 @@
             "size": 2919,
             "mtime": 1771559176.0,
             "sha256": "3302ddfec11a0f2a1d9e0eda88f6f23ca189cf93d401a01ca826bfcad160e6ec"
-        },
-        "vcxproj_raw.txt": {
-            "size": 7898,
-            "mtime": 1781370050.385718,
-            "sha256": "8e91b3741adedeee50da491d6bb2b51e64f0f4e0a1e7e797eebdd9f1dd89954a"
-        },
-        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.3.tlog": {
-            "size": 2,
-            "mtime": 1781368242.5669715,
-            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
         },
         "art.libs/x64/SDL3_ttf.pdb": {
             "size": 18280448,
@@ -606,16 +571,6 @@
             "mtime": 1771559176.0,
             "sha256": "81d78f7a087bb1d122565b2310ad139a3672d372e3d1c4a615b00c2403edeb90"
         },
-        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.read.4.tlog": {
-            "size": 2,
-            "mtime": 1781368242.5669715,
-            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
-        },
-        "vc140.pdb": {
-            "size": 135168,
-            "mtime": 1781371162.727765,
-            "sha256": "0234045aa8b73a65c384c63f1900f1aa4dd0c24d77edadb0d2e058547a5afe5b"
-        },
         "include/SDL3/SDL_copying.h": {
             "size": 984,
             "mtime": 1767235698.0,
@@ -656,16 +611,6 @@
             "mtime": 1767235698.0,
             "sha256": "60a809df30e0c549a91b986f517ff94515ab80a529db95d97655a2c417f0f927"
         },
-        "Art3DC++/x64/Debug/Art3DC++.tlog/link.29900.write.1.tlog": {
-            "size": 2,
-            "mtime": 1781368242.5663998,
-            "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
-        },
-        "Art3DC++.exe": {
-            "size": 738816,
-            "mtime": 1781371162.771467,
-            "sha256": "e43af3762fb56da9e38635791a608e6877fbbc9eb2344d1cbc1033e80fddc6f7"
-        },
         "art.libs/x64/SDL3.pdb": {
             "size": 14684160,
             "mtime": 1780224822.0,
@@ -696,11 +641,6 @@
             "mtime": 1779257010.0,
             "sha256": "f64bd68f3ba36b2d3bf015370c67352fd414bbc26c9d2f7d731f244d3e5f0ecf"
         },
-        "Art3DC++.ilk": {
-            "size": 2649308,
-            "mtime": 1781371162.778661,
-            "sha256": "e81ce258aa6b6dd1974f86d9a659304e472fbc6c2c0868c000fe9de4b515a96f"
-        },
         "include/SDL3/SDL_log.h": {
             "size": 16982,
             "mtime": 1771617812.0,
@@ -720,6 +660,591 @@
             "size": 97988,
             "mtime": 1779764252.0,
             "sha256": "f2ee08f08ac918f9960005b37200c0dd9c2fa13be3418c0960ea3f87ee13498d"
+        },
+        "imgui/imconfig.h": {
+            "size": 12695,
+            "mtime": 1781409487.0713022,
+            "sha256": "f416e21bbe8b97f969259897534781b0e82474b1d04b40898508411c6a8abeda"
+        },
+        "Art3DC++/x64/Debug/Size2D.ixx.ifc.d.json": {
+            "size": 273,
+            "mtime": 1781408110.6876516,
+            "sha256": "e5d4446ed6c075678ce112d10a8763dc92b803f23030c5135fcd8296a0a6c5a8"
+        },
+        "imgui/imgui.cpp": {
+            "size": 1306434,
+            "mtime": 1781409487.076757,
+            "sha256": "9b82db61ef5b6ac484cc57405b773a02d2d3589d534da6dbe95464e2f0b7d0a5"
+        },
+        "Art3DC++/x64/Debug/imgui_draw.obj": {
+            "size": 1272497,
+            "mtime": 1781473437.6061492,
+            "sha256": "075bf6d3d222709e72ff8ac2d49b9a3ab379c4d3c2e8a8bc60af8557fb8aaa2a"
+        },
+        "imgui/imgui.h": {
+            "size": 466649,
+            "mtime": 1781409487.077759,
+            "sha256": "17fc6191cf8ca67c9a64a7bd64268be4be7ec41486bd803291e283d87473e000"
+        },
+        "imgui/imgui_tables.cpp": {
+            "size": 261727,
+            "mtime": 1781409487.0844052,
+            "sha256": "f6408e749b1224ea9f67aaf5aab69a2a3b2bd7dd0b1939f4afc5c7891eca6a29"
+        },
+        "imgui/imgui_internal.h": {
+            "size": 334482,
+            "mtime": 1781409487.083382,
+            "sha256": "70e6d059f973f8413918745f0ed3867ff58c9feb6e7e0a328f0d1dae12dc61a9"
+        },
+        "imgui/imstb_truetype.h": {
+            "size": 204588,
+            "mtime": 1781409487.0889175,
+            "sha256": "a4131c7a2e324c0625250830af6976adb5732b453f0fc6e8bc5ad70065bc2b79"
+        },
+        "Art3DC++/x64/Debug/BaseDrawables.ixx.ifc": {
+            "size": 20971,
+            "mtime": 1781408110.8770053,
+            "sha256": "d91469a6310b4f55822be6743f736e8256c6d4762887ba6f2c2d4282c67eee0a"
+        },
+        "Art3DC++/x64/Debug/Frame.ixx.ifc.d.json": {
+            "size": 19416,
+            "mtime": 1781408111.0709398,
+            "sha256": "e04cee6ddf991902c16aa796dac5af0be59907a22a8a8f0149d33f6f5424fc27"
+        },
+        "Art3DC++/x64/Debug/PropertiesWindow.ixx.ifc.d.json": {
+            "size": 12330,
+            "mtime": 1781447530.9061303,
+            "sha256": "93eea350e1014b45541c2fa059bf4917e182accf528070fa1886a888ef2740eb"
+        },
+        "x64/Debug/SDL3.dll": {
+            "size": 2804736,
+            "mtime": 1780224822.0,
+            "sha256": "c39fbda24eca1009b06a4d4e340d12511e3c8b0d44c4898d29e336e2cc7a25f0"
+        },
+        "x64/Debug/SDL3_image.dll": {
+            "size": 384512,
+            "mtime": 1777639732.0,
+            "sha256": "8ffbeafa9ba9f28de150b9bb45cc045de335b3251725f95aa708848ce37f3a74"
+        },
+        "Art3DC++/x64/Debug/PropertiesWindow.ixx.ifc": {
+            "size": 2736195,
+            "mtime": 1781447530.9061303,
+            "sha256": "cc68cd78c30237dc5eb97b3d039518a66469c2edf55b1cbfc1cb04affc8d2131"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.ilk": {
+            "size": 9588194,
+            "mtime": 1781484986.9094021,
+            "sha256": "c55f29ac7a834b637143552dc93df25517963bbcd69de3854a7b8267da69f6bd"
+        },
+        "Art3DC++/x64/Debug/imgui_widgets.obj": {
+            "size": 1486550,
+            "mtime": 1781473437.536642,
+            "sha256": "58efec19885d2c474153b1f5a43aa24aa5c3e8f6b5ac7da18ca66b4a558d51ca"
+        },
+        "Art3DC++/x64/Debug/ExplorerWindow.ixx.ifc.d.json": {
+            "size": 13639,
+            "mtime": 1781447524.2773044,
+            "sha256": "0c2536841e4850a8f4bf5c804be37a60257f7a4241268783e0cd4cf4b3fe302f"
+        },
+        "Art3DC++/x64/Debug/imgui_impl_sdlrenderer3.obj": {
+            "size": 98874,
+            "mtime": 1781473437.465001,
+            "sha256": "177bd2fdd8174552c5b7ea4a6fd4989dbfb08c48ae8926b11048d78e1a700c4b"
+        },
+        "x64/Debug/Art3DC++.exe": {
+            "size": 4439040,
+            "mtime": 1781484986.898502,
+            "sha256": "9d9adb4a5eaa96977ff16c14dec2f8a8bdf5120ce9dbfccad7c3a6c04197272f"
+        },
+        "Art3DC++/x64/Debug/GameObject.ixx.ifc": {
+            "size": 5093598,
+            "mtime": 1781447523.6979504,
+            "sha256": "ffdb0fa8840b21ae972fc662b1f45ebd6ef46b694ec109e4c14883521116ddc4"
+        },
+        "Art3DC++/x64/Debug/imgui.obj": {
+            "size": 3113831,
+            "mtime": 1781473437.7702198,
+            "sha256": "57d2fb23d1645b7c6fbd305923f5b7a417f47c4dd29a49df77e9e00db98094df"
+        },
+        "README.md": {
+            "size": 766,
+            "mtime": 1781409674.2419896,
+            "sha256": "4d5454c5e21da82973de9b8af1042b275d85086d5d00ff8e410d3b6d0a3bfb59"
+        },
+        "Art3DC++/x64/Debug/imgui_demo.obj": {
+            "size": 1539045,
+            "mtime": 1781473437.6605246,
+            "sha256": "4c42d44bee6602578e270f6c1bb9fb3b21f8ffb3daeaf26982b66cd9bb36a121"
+        },
+        "imgui.ini": {
+            "size": 987,
+            "mtime": 1781485047.5325768,
+            "sha256": "c0e83609153e6b44295657a739857260919d84203a227bdbd320169d232c1082"
+        },
+        "Art3DC++/x64/Debug/ExplorerWindow.ixx.ifc": {
+            "size": 5231587,
+            "mtime": 1781409510.692399,
+            "sha256": "6d2a8ff3a9c7c62665c002fd7abb4cffe8f6eb952feae039695bca836ff3e876"
+        },
+        "Art3DC++/x64/Debug/GameObject.ixx.ifc.d.json": {
+            "size": 13105,
+            "mtime": 1781447523.6989532,
+            "sha256": "92f4ebd32d4bb13767e326352cbb39fe7be73e3091de3c6736fe3348f4634c46"
+        },
+        "imgui/imgui_impl_sdl3.cpp": {
+            "size": 68365,
+            "mtime": 1781409487.0272624,
+            "sha256": "d4c1f70cdd5ce188df4e598b480cdfccf927654fb1ee0b636291d3043c0589ee"
+        },
+        "imgui/imgui_widgets.cpp": {
+            "size": 570266,
+            "mtime": 1781409487.086917,
+            "sha256": "3929040e685f4aecfb27844ee6578f5a08d894534fe0f01078d2c1a79d7bf274"
+        },
+        "imgui/imgui_demo.cpp": {
+            "size": 621991,
+            "mtime": 1781409487.080739,
+            "sha256": "41ec06a21bebe488c5c3a5bcd1793223cfa66e64582c3de7ad73d30df82f8242"
+        },
+        "imgui/imgui_draw.cpp": {
+            "size": 389662,
+            "mtime": 1781409487.0822623,
+            "sha256": "5bb9881638036427dba9b8711e88b9abb97cf8024e24369d67b8be16f54f7220"
+        },
+        "Art3DC++/x64/Debug/Position2D.ixx.ifc": {
+            "size": 2223,
+            "mtime": 1781408110.6876516,
+            "sha256": "a28b5868e0b6b1318831ac96e8fd803e71d5821ae2e9611819cb2d905f9f3abd"
+        },
+        "imgui/imstb_rectpack.h": {
+            "size": 20973,
+            "mtime": 1781409487.0879178,
+            "sha256": "7f9bffb8ac5e79d20787fdc20d29d29f7474dca673f64d4a9a8a9f9373e40972"
+        },
+        "Art3DC++/x64/Debug/Frame.ixx.ifc": {
+            "size": 20795,
+            "mtime": 1781408111.0709398,
+            "sha256": "735b43b53654af0b1421587a3012882ff77993dfc753137554d3880f28b26feb"
+        },
+        "Art3DC++/x64/Debug/imgui_tables.obj": {
+            "size": 587003,
+            "mtime": 1781473437.5590734,
+            "sha256": "991965e7b0f98d81aeec7a8817b9e1a41c4c228799c83b2f4caccde15234012c"
+        },
+        "Art3DC++/x64/Debug/Position2D.ixx.ifc.d.json": {
+            "size": 281,
+            "mtime": 1781408110.6876516,
+            "sha256": "273cbc9158a0a8759ca635dc355c4b7561199ba836b1765fb9460760dda29434"
+        },
+        "imgui/imgui_impl_sdl3.h": {
+            "size": 4460,
+            "mtime": 1781409487.0272624,
+            "sha256": "1cbce6a59b80c2e6c6834d9db2942984b0a18423f340d1d15f25a67fc89a6bc0"
+        },
+        "x64/Debug/SDL3_ttf.dll": {
+            "size": 2021888,
+            "mtime": 1743420536.0,
+            "sha256": "95a20af07f194f057b6e778bee0ce608d3c90c3dbd64a4b5120dc4879f43a6be"
+        },
+        "imgui/imstb_textedit.h": {
+            "size": 61638,
+            "mtime": 1781409487.0879178,
+            "sha256": "24a8db00354af8f4057417841635a1b6dfd8986f1608336fe6f10d6fd9769aaa"
+        },
+        "Art3DC++/x64/Debug/imgui_impl_sdl3.obj": {
+            "size": 216584,
+            "mtime": 1781473437.4767282,
+            "sha256": "8dd94950b80eb42de4115764b84bc3cc9f508eebc1b9d96ca92c146bcc2e4e7c"
+        },
+        "Art3DC++/x64/Debug/Size2D.ixx.ifc": {
+            "size": 2211,
+            "mtime": 1781408110.6876516,
+            "sha256": "66974fed2c725d0535a0cd1df7288dd1f04ad580002614f4c0d740af5fa8fba0"
+        },
+        "Art3DC++/x64/Debug/BaseDrawables.ixx.ifc.d.json": {
+            "size": 19255,
+            "mtime": 1781408110.8770053,
+            "sha256": "f2991d26865f5b6ab518f24c025177a8e1618648620dade992e43379d2878357"
+        },
+        "Art3DC++/x64/Debug/Matrix4x4.ixx.ifc": {
+            "size": 16965,
+            "mtime": 1781438974.998376,
+            "sha256": "177b151bf58ce04d7aa43b1b3cfe890b95f5b7ded0123914d8c75dc30a5722eb"
+        },
+        "art.modules/art.datatypes/Position2D.h": {
+            "size": 538,
+            "mtime": 1781473377.06426,
+            "sha256": "eefe9bc3d6064fef695b5d246b2c6d8b7f31bce7caa496f73e33900acf7db381"
+        },
+        "art.modules/art.datatypes/BasePart.h": {
+            "size": 543,
+            "mtime": 1781475529.2203138,
+            "sha256": "28d645d0d418a281d5f5ee87aacefd6793e169693424310bb83deb7d417880c7"
+        },
+        "art.modules/art.objects/LightSource.h": {
+            "size": 938,
+            "mtime": 1781475532.2777207,
+            "sha256": "62084fe128a9f685406e804e80bca7396975d82298f30ce1f9776b505946d882"
+        },
+        "art.modules/art.datatypes/Vector3D.h": {
+            "size": 547,
+            "mtime": 1781473380.8309267,
+            "sha256": "0b7e56e267a290840555f3b51713d629433ed710331212933ddf6f9ae45edb83"
+        },
+        "Art3DC++/x64/Debug/BasePart.ixx.ifc.d.json": {
+            "size": 12767,
+            "mtime": 1781436344.5208366,
+            "sha256": "f3e8b5c9e3bda732a3566e56b6a8364a774f12d0fda2296e3521fa58f01d0fd6"
+        },
+        "Art3DC++/x64/Debug/LightSource.ixx.ifc.d.json": {
+            "size": 11790,
+            "mtime": 1781447524.1538987,
+            "sha256": "c090dba6cf743ebab2e7eaaf7ed37c77417bcb2a130d1086bf8f67230f751b16"
+        },
+        "Art3DC++/x64/Debug/LightSource.ixx.ifc": {
+            "size": 3284694,
+            "mtime": 1781447524.1538987,
+            "sha256": "b8e598bbab0729fc1f796466f0b3b1d9c6495d2cfc98923f965cb8bc9dceb9ef"
+        },
+        "art.modules/art.userinterface/GpuPipeline.h": {
+            "size": 14579,
+            "mtime": 1781482324.3912666,
+            "sha256": "8648a5d1decd9fc28a421e0a991150650a3a8c1e15fe4660adeaed2658fa252b"
+        },
+        "shaders/shader.vs.dxil": {
+            "size": 5144,
+            "mtime": 1781449134.4650042,
+            "sha256": "acdc7873535095d119e3f06c8a44fa6773e2b578a730d9526e89cf838757fff5"
+        },
+        "imgui/imgui_impl_sdlgpu3.cpp": {
+            "size": 42158,
+            "mtime": 1781436495.9474442,
+            "sha256": "ccdfe6a42d7a2a0510f3f3aad9bebe459bdbabbfbd97126e1c2ebdd69603423e"
+        },
+        "Art3DC++/x64/Debug/Part.ixx.ifc": {
+            "size": 3284617,
+            "mtime": 1781436626.857597,
+            "sha256": "dc8adcee5ebfb600f895429587bb3f049583cb829edcbf08d542e943f407a875"
+        },
+        "Art3DC++/x64/Debug/CameraController.ixx.ifc": {
+            "size": 83191,
+            "mtime": 1781438975.231865,
+            "sha256": "c189aa7f3795d35c4e4082f935d8a711d193dc3dee02fd3c19a35fe1e849417f"
+        },
+        "art.modules/art.userinterface/BaseDrawables.h": {
+            "size": 453,
+            "mtime": 1781473760.420553,
+            "sha256": "75c7ae39282706a76437a3083163aaabf9411e5cbb2fe5bb58d5db9fcf5f24a7"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.Build.CppClean.log": {
+            "size": 3951,
+            "mtime": 1781473434.6579392,
+            "sha256": "df6de03137f268e077842cff6db5c3bdd1fa81a7315723615dd1bfe1fe0e9f28"
+        },
+        "art.modules/art.objects/Part.h": {
+            "size": 743,
+            "mtime": 1781475530.7725513,
+            "sha256": "7c2924e6d3c473750bdacbbfc8e658dfd8fbc85065ecb6c02f50ff46be321c0b"
+        },
+        "imgui/imgui_impl_sdlgpu3.h": {
+            "size": 4300,
+            "mtime": 1781436495.9480138,
+            "sha256": "c9f39e20777b759326c755b4d0fd8a7a84599812112db4623bcfecfdafd23fed"
+        },
+        "shaders/compile_shaders.ps1": {
+            "size": 861,
+            "mtime": 1781436583.4127512,
+            "sha256": "c6d6e09f5fb8268a6bb0110f59d208bb61af9b4eeb9d0d68ae3b5b0bbfb8799e"
+        },
+        "Art3DC++/x64/Debug/GpuPipeline.ixx.ifc.d.json": {
+            "size": 29246,
+            "mtime": 1781447773.1983378,
+            "sha256": "5e7a87159ffbbac26db73068abfbfd9378e14fd2a78b7661b3d1aab0f474f45e"
+        },
+        "Art3DC++/x64/Debug/Part.ixx.ifc.d.json": {
+            "size": 11438,
+            "mtime": 1781436626.857597,
+            "sha256": "566b493db203f9030b4c5d05b44dacd5f771d5dd6d46653972ce545fba63e3ae"
+        },
+        "Art3DC++/x64/Debug/Vector3D.ixx.ifc.d.json": {
+            "size": 277,
+            "mtime": 1781436343.9811707,
+            "sha256": "3ea00f8547753b5fa0c0761c3f1f71aa3a213f485eecbbf231853e8e11171397"
+        },
+        "shaders/shader.ps.dxil": {
+            "size": 4384,
+            "mtime": 1781449134.4849224,
+            "sha256": "92c7f257f2b94c6bc22efbc682d219c97997cd4457d93c7947d54e016dd470b4"
+        },
+        "Art3DC++/x64/Debug/imgui_impl_sdlgpu3.obj": {
+            "size": 122289,
+            "mtime": 1781473437.4539123,
+            "sha256": "9332c71cf44b383dce37c068aa342e40127f3f545e344054668737850f85d375"
+        },
+        "art.modules/art.userinterface/Frame.h": {
+            "size": 805,
+            "mtime": 1781475533.4706779,
+            "sha256": "fa8a57b9cb7ae2d9ca7c753a21927dc2ff9350fcaf5f04c1780c11c639ab6703"
+        },
+        "art.modules/imgui.interface/PropertiesWindow.h": {
+            "size": 7556,
+            "mtime": 1781476710.534062,
+            "sha256": "7ae5538fbf3c85d891f53d5a173c419f3c77372a3508e88b7d7ed1f8bef0c750"
+        },
+        "Art3DC++/x64/Debug/GpuPipeline.ixx.ifc": {
+            "size": 7497399,
+            "mtime": 1781447773.1983378,
+            "sha256": "4dc94a8884b1990bae2408abf980ceb6a60e519cb438842ce164205d2c6dad17"
+        },
+        "Art3DC++/x64/Debug/Vector3D.ixx.ifc": {
+            "size": 2865,
+            "mtime": 1781436343.9811707,
+            "sha256": "7500895046698f7c0146451a762de6aedc1745278c0f0ac4730120da5fd1f65e"
+        },
+        "Art3DC++/x64/Debug/BasePart.ixx.ifc": {
+            "size": 5091739,
+            "mtime": 1781436344.5193305,
+            "sha256": "7dafd245292363b22cceced46c6cbf11d44655d3bb29487aa2b2aff3190b78f7"
+        },
+        "art.modules/imgui.interface/ExplorerWindow.h": {
+            "size": 1810,
+            "mtime": 1781481914.3134904,
+            "sha256": "c615c364e39c91781032c896d4ef676d9521d4a8c2934a9ed00764428a5ac93e"
+        },
+        "shaders/shader.hlsl": {
+            "size": 1642,
+            "mtime": 1781449077.307837,
+            "sha256": "6174d9d2211fae728e993fa0e077ba51b8c3cd0edf6fcd04a207858aec1d8e82"
+        },
+        "Art3DC++/x64/Debug/Matrix4x4.ixx.ifc.d.json": {
+            "size": 3951,
+            "mtime": 1781438974.998376,
+            "sha256": "53cbf57cc98e6f28f93d8b2d456d66394d330483afa1cbc0b06707c09ddfd940"
+        },
+        "art.modules/art.enginemovement/CameraController.h": {
+            "size": 3090,
+            "mtime": 1781482300.3834279,
+            "sha256": "a9d6c199e97b2f64b6d53bf9d002e0ef433b5a2532dcbab55c074f403de51077"
+        },
+        "art.modules/art.datatypes/Matrix4x4.h": {
+            "size": 2662,
+            "mtime": 1781473382.7205822,
+            "sha256": "f87557220d679e275e6fd633b5e102832215909ad570791547612ec49fceb1ba"
+        },
+        "Art3DC++/x64/Debug/CameraController.ixx.ifc.d.json": {
+            "size": 21600,
+            "mtime": 1781438975.2328646,
+            "sha256": "ca758a3e7e7bec896a691e483b3bb9c5171b9f6895d5239f2dd74ec3f17b14a8"
+        },
+        "art.modules/art.datatypes/Size2D.h": {
+            "size": 510,
+            "mtime": 1781473378.9251814,
+            "sha256": "0815eee6698b006ca1b8c2575d7544eb2084a1465d02226064c83e09691bc3d3"
+        },
+        "imgui/imgui_impl_sdlgpu3_shaders.h": {
+            "size": 67445,
+            "mtime": 1781436697.907946,
+            "sha256": "a9b14825fc3f8b4809d914553130f6a2ea9b45c86db21eb72896edb72611a897"
+        },
+        "Art3DC++/x64/Debug/Art3DC++.vcxproj.FileListAbsolute.txt": {
+            "size": 0,
+            "mtime": 1781473434.6130116,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "art.modules/art.datatypes/GameObject.h": {
+            "size": 3276,
+            "mtime": 1781476706.0569153,
+            "sha256": "29ecdd4ff36c39e95a3a4993d467906409c4598289d358e785344daff7fbe4e5"
+        },
+        "suzanne.obj": {
+            "size": 49137,
+            "mtime": 1781475771.454671,
+            "sha256": "d8684326f9bd8cfc24d3d302c1042fa16f63d2e66e49ed56b413fa20bed271e6"
+        },
+        "sofa.obj": {
+            "size": 367996,
+            "mtime": 1573174612.8125763,
+            "sha256": "af36c5eacfc542666022eb790616726f52a7ef4b609a2de8e1e31e45006e186c"
+        },
+        "imgui/TextEditor.cpp": {
+            "size": 98006,
+            "mtime": 1781483246.110179,
+            "sha256": "87c754672088268cae567f82445ad737ab2975f01f3ff73d6ef06c36408d3747"
+        },
+        "ttf/JetBrainsMonoNL-ThinItalic.ttf": {
+            "size": 209124,
+            "mtime": 1673709601.0,
+            "sha256": "58812240c633523eb930ac6ce86f392f4e2b5ad920549278d1758d70af972ad7"
+        },
+        "ttf/JetBrainsMonoNL-MediumItalic.ttf": {
+            "size": 211604,
+            "mtime": 1673709601.0,
+            "sha256": "2a5c56075d7bec1d54fa9761d5eeef7d4267e134d86962011425503b27e61ddd"
+        },
+        "ttf/JetBrainsMonoNL-Light.ttf": {
+            "size": 210840,
+            "mtime": 1673709601.0,
+            "sha256": "8bf1b1733d0a32c4ada2451deb1bd36e6945be3bf2bf2ba80c2be7c95e57f230"
+        },
+        "ttf/JetBrainsMono-Italic.ttf": {
+            "size": 276840,
+            "mtime": 1673709601.0,
+            "sha256": "9d0a1f7a708e6af183f1193b7e81d40da294f5c67682c085d8401c60aac8ded4"
+        },
+        "ttf/JetBrainsMono-ExtraBoldItalic.ttf": {
+            "size": 281616,
+            "mtime": 1673709601.0,
+            "sha256": "ec3a860fa87d0a3b1451277d1c2f3072f5ba19d2367aec54f7169d5710872610"
+        },
+        "art.modules/art.objects/LogicScript.h": {
+            "size": 948,
+            "mtime": 1781481912.0429583,
+            "sha256": "a0c3fa411252e8f62e93d4af028376397e4685d24ef00c95ae7438371b1adaef"
+        },
+        "ttf/JetBrainsMonoNL-ExtraLightItalic.ttf": {
+            "size": 209884,
+            "mtime": 1673709601.0,
+            "sha256": "7d5c8b4d42d7a4c268398c066f71b606f7f071864e73740c99a58838c55efde5"
+        },
+        "ttf/JetBrainsMono-ExtraLightItalic.ttf": {
+            "size": 274240,
+            "mtime": 1673709601.0,
+            "sha256": "3c7fee57538f18b61cc5f0784a8133fe5ee95feb41f633e8f6f7ef609e6207ec"
+        },
+        "ttf/JetBrainsMono-LightItalic.ttf": {
+            "size": 277104,
+            "mtime": 1673709601.0,
+            "sha256": "18ffadb91fa711b45feae027ddfd561e7f97ace805ec4baf9905046cf450befb"
+        },
+        "Art3DC++/x64/Debug/TextEditor.obj": {
+            "size": 5146310,
+            "mtime": 1781483587.1473646,
+            "sha256": "844f0f23597ea31342e321ba5bfb6297d7e8e550c3ad2287e7cce3d0c46bc43a"
+        },
+        "ttf/JetBrainsMono-ExtraBold.ttf": {
+            "size": 279404,
+            "mtime": 1673709601.0,
+            "sha256": "8e501d3a6a883e83ea4f7852804fb0894cebdd67751bb1006b37a476cef34cd6"
+        },
+        "ttf/JetBrainsMono-Medium.ttf": {
+            "size": 273860,
+            "mtime": 1673709601.0,
+            "sha256": "31c92d01a8a08528b718a43addf0ad3df0af2ca4b7b3290a452f70f358e14d3d"
+        },
+        "ttf/JetBrainsMonoNL-Italic.ttf": {
+            "size": 211624,
+            "mtime": 1673709601.0,
+            "sha256": "c7392a134293e1af1d36fbf04940dd844f632afbf97f8325d1591d3af5096cb8"
+        },
+        "ttf/JetBrainsMonoNL-SemiBoldItalic.ttf": {
+            "size": 214032,
+            "mtime": 1673709601.0,
+            "sha256": "f813544badbdab235b1f2f9933bb978be0a87cbde0133aaa05b80a84a7d94c22"
+        },
+        "ttf/JetBrainsMonoNL-SemiBold.ttf": {
+            "size": 209864,
+            "mtime": 1673709601.0,
+            "sha256": "2c5dc6725fdbb0dccf65adceb38fdcd95e5fc8a5b74d5c150e38a5faa02a8945"
+        },
+        "ttf/JetBrainsMono-Thin.ttf": {
+            "size": 270112,
+            "mtime": 1673709601.0,
+            "sha256": "0756e8e8cf1d65fa7519776764479b3973efb15af4f419d5d7274dc27ae1b702"
+        },
+        "ttf/JetBrainsMono-MediumItalic.ttf": {
+            "size": 276804,
+            "mtime": 1673709601.0,
+            "sha256": "4477fda6bd472ef96b11bc1083370f7fc3ff427bdc807e682ced5819e3dee9df"
+        },
+        "ttf/JetBrainsMono-SemiBoldItalic.ttf": {
+            "size": 279828,
+            "mtime": 1673709601.0,
+            "sha256": "3b3000507a7285872395ddbb4e53a28f07910dbf494fb0d5e1421dd60b5d8436"
+        },
+        "ttf/JetBrainsMonoNL-ExtraBold.ttf": {
+            "size": 213372,
+            "mtime": 1673709601.0,
+            "sha256": "673f0209e5428e5f73a159df85806f8a5bf7f83316bb9554427a3eb877ee0cb7"
+        },
+        "ttf/JetBrainsMono-BoldItalic.ttf": {
+            "size": 279832,
+            "mtime": 1673709601.0,
+            "sha256": "4039d5ce0ed225bf9c8b2c8c6436290ae2f356b7e90d70fa666227238324aa3b"
+        },
+        "ttf/JetBrainsMono-ExtraLight.ttf": {
+            "size": 274144,
+            "mtime": 1673709601.0,
+            "sha256": "8391e7ec13e8ba758c1838f56bccd973228ccf4dc74aa5bffe9525b9147b12f8"
+        },
+        "ttf/JetBrainsMonoNL-ExtraBoldItalic.ttf": {
+            "size": 215456,
+            "mtime": 1673709601.0,
+            "sha256": "0f386a0bd99bb2d41079fe438725b471b49a48e355b8d57399b7a6e8e1c63da6"
+        },
+        "ttf/JetBrainsMonoNL-LightItalic.ttf": {
+            "size": 212320,
+            "mtime": 1673709601.0,
+            "sha256": "edbf41bed6eea37ae5d6ccd4353158d5bef140f1d078408ea20e4e599622b895"
+        },
+        "ttf/JetBrainsMonoNL-Bold.ttf": {
+            "size": 210988,
+            "mtime": 1673709601.0,
+            "sha256": "0198e841824025f8876e5c297f0b9b497ee8d6eb9969710a3328e1303f996ec3"
+        },
+        "ttf/JetBrainsMonoNL-Regular.ttf": {
+            "size": 208576,
+            "mtime": 1673709601.0,
+            "sha256": "fb3b2575d7b0657359707993288f12a7360344d39387bb26050e276d61f6bd2a"
+        },
+        "ttf/JetBrainsMono-ThinItalic.ttf": {
+            "size": 272984,
+            "mtime": 1673709601.0,
+            "sha256": "ebcdd13119b6beb7457e2f76b31094cb8cf1108e567030f8402b24dde018e76a"
+        },
+        "ttf/JetBrainsMonoNL-Thin.ttf": {
+            "size": 206004,
+            "mtime": 1673709601.0,
+            "sha256": "1acb532f18726155022a1e8b717bf7bde3eb30e9e064ccc6d17b3d91e95204b0"
+        },
+        "ttf/JetBrainsMono-Light.ttf": {
+            "size": 276452,
+            "mtime": 1673709601.0,
+            "sha256": "60c18d7dd58d81b3bbd12e8ce32744a8771bfe2b5280574082b0eaed46c60d24"
+        },
+        "ttf/JetBrainsMono-SemiBold.ttf": {
+            "size": 277092,
+            "mtime": 1673709601.0,
+            "sha256": "1b3bfa1ed5665a4ce3f9feb68d2d4e40e70bf8b4b7d9a3edd418f321b4e166a0"
+        },
+        "ttf/JetBrainsMono-Bold.ttf": {
+            "size": 277828,
+            "mtime": 1673709601.0,
+            "sha256": "5590990c82e097397517f275f430af4546e1c45cff408bde4255dad142479dcb"
+        },
+        "imgui/TextEditor.h": {
+            "size": 11431,
+            "mtime": 1781483500.4455588,
+            "sha256": "ae0eec6af8fa4bee9a92a9d4d4c741e977b5fd2b3c959949bdc1b505b9dcfa6e"
+        },
+        "ttf/JetBrainsMonoNL-Medium.ttf": {
+            "size": 208276,
+            "mtime": 1673709601.0,
+            "sha256": "44099e1efefba55637e0abbbf8dd3f526e59523345888a257bb01d39df4af74c"
+        },
+        "ttf/JetBrainsMonoNL-ExtraLight.ttf": {
+            "size": 209072,
+            "mtime": 1673709601.0,
+            "sha256": "4ffddcd8bbebbdd8c066bd66ea32aa7995fdb7bc626777b1a8948074c85a2e9f"
+        },
+        "ttf/JetBrainsMono-Regular.ttf": {
+            "size": 273900,
+            "mtime": 1673709601.0,
+            "sha256": "a0bf60ef0f83c5ed4d7a75d45838548b1f6873372dfac88f71804491898d138f"
+        },
+        "ttf/JetBrainsMonoNL-BoldItalic.ttf": {
+            "size": 214132,
+            "mtime": 1673709601.0,
+            "sha256": "6c2716f2e85101f4109a8c16916061eb38176b3b10342834858d6221ec2fda1b"
         }
     },
     "dirs": [
@@ -737,6 +1262,15 @@
         "include/SDL3",
         "include/SDL3_image",
         "art.libs/x64",
-        "art.libs"
+        "art.libs",
+        "art.modules/art.datatypes",
+        "art.modules",
+        "art.modules/imgui.interface",
+        "imgui",
+        "art.modules/art.enginemovement",
+        "art.modules/art.userinterface",
+        "shaders",
+        "art.modules/art.objects",
+        "ttf"
     ]
 }

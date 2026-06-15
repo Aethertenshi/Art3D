@@ -146,20 +146,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Art3DC++.cpp" />
-    <ClCompile Include="art.modules\art.datatypes\Position2D.ixx" />
-    <ClCompile Include="art.modules\art.datatypes\Size2D.ixx" />
-    <ClCompile Include="art.modules\art.datatypes\GameObject.ixx" />
-    <ClCompile Include="art.modules\art.interfaces\BaseDrawables.ixx" />
-    <ClCompile Include="art.modules\art.interfaces\Frame.ixx" />
-    <ClCompile Include="art.modules\imgui.interface\ExplorerWindow.ixx" />
-    <ClCompile Include="art.modules\imgui.interface\PropertiesWindow.ixx" />
+    <ClInclude Include="art.modules\art.datatypes\Matrix4x4.h" />
+    <ClInclude Include="art.modules\art.datatypes\Position2D.h" />
+    <ClInclude Include="art.modules\art.datatypes\Size2D.h" />
+    <ClInclude Include="art.modules\art.datatypes\GameObject.h" />
+    <ClInclude Include="art.modules\art.datatypes\Vector3D.h" />
+    <ClInclude Include="art.modules\art.datatypes\BasePart.h" />
+    <ClInclude Include="art.modules\art.enginemovement\CameraController.h" />
+    <ClInclude Include="art.modules\art.userinterface\BaseDrawables.h" />
+    <ClInclude Include="art.modules\art.userinterface\Frame.h" />
+    <ClInclude Include="art.modules\art.userinterface\GpuPipeline.h" />
+    <ClInclude Include="art.modules\art.objects\Part.h" />
+    <ClInclude Include="art.modules\art.objects\LightSource.h" />
+    <ClInclude Include="art.modules\imgui.interface\ExplorerWindow.h" />
+    <ClInclude Include="art.modules\imgui.interface\PropertiesWindow.h" />
+    <ClInclude Include="imgui\TextEditor.h" />
     <ClCompile Include="imgui\imgui.cpp" />
     <ClCompile Include="imgui\imgui_demo.cpp" />
     <ClCompile Include="imgui\imgui_draw.cpp" />
     <ClCompile Include="imgui\imgui_tables.cpp" />
     <ClCompile Include="imgui\imgui_widgets.cpp" />
     <ClCompile Include="imgui\imgui_impl_sdl3.cpp" />
-    <ClCompile Include="imgui\imgui_impl_sdlrenderer3.cpp" />
+    <ClCompile Include="imgui\imgui_impl_sdlgpu3.cpp" />
+    <ClCompile Include="imgui\TextEditor.cpp" />
   </ItemGroup>
 
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
