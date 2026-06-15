@@ -32,6 +32,7 @@
                 "${workspaceFolder}/imgui/imgui_impl_sdl3.cpp",
                 "${workspaceFolder}/imgui/imgui_impl_sdlrenderer3.cpp",
                 "${workspaceFolder}/imgui/imgui_impl_sdlgpu3.cpp",
+                "${workspaceFolder}/imgui/TextEditor.cpp",
                 "${workspaceFolder}/Art3DC++.cpp",
                 "/Fe:", "${workspaceFolder}/Art3DC++.exe",
                 "/Fd:", "${workspaceFolder}/vc140.pdb", // <-- Explicitly forces the PDB to generate inside your project folder

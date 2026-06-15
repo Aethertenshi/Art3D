@@ -1173,7 +1173,7 @@ int main() {
                         LogicScript* script = g_openScripts[i].ptr;
                         auto& editor = g_scriptEditors[script];
 
-                        if (editor.GetLanguageDefinition().mName.empty()) {
+                        if (editor.GetLanguageDefinition().mName != "Wren") {
                             editor.SetLanguageDefinition(TextEditor::LanguageDefinition::Wren());
                             editor.SetText(script->SourceCode);
                         }
