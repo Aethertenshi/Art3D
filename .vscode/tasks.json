@@ -3,51 +3,16 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "Build Art3DC++ (SDL3)",
-            "command": "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+            "label": "Build Art3DC++ (MSBuild)",
+            "command": "msbuild",
             "args": [
-                "/Zi",
-                "/FS",                           // <-- Forces synchronous PDB writes to prevent conflict errors
-                "/EHsc",
-                "/nologo",
-                "/std:c++20",
-                "/I", "${workspaceFolder}/include",
-                "/I", "${workspaceFolder}/imgui",
-                "${workspaceFolder}/art.modules/art.datatypes/Position2D.ixx",
-                "${workspaceFolder}/art.modules/art.datatypes/Size2D.ixx",
-                "${workspaceFolder}/art.modules/art.datatypes/GameObject.ixx",
-                "${workspaceFolder}/art.modules/art.datatypes/Vector3D.ixx",
-                "${workspaceFolder}/art.modules/art.datatypes/BasePart.ixx",
-                "${workspaceFolder}/art.modules/art.interfaces/BaseDrawables.ixx",
-                "${workspaceFolder}/art.modules/art.interfaces/Frame.ixx",
-                "${workspaceFolder}/art.modules/art.interfaces/GpuPipeline.ixx",
-                "${workspaceFolder}/art.modules/art.objects/Part.ixx",
-                "${workspaceFolder}/art.modules/imgui.interface/ExplorerWindow.ixx",
-                "${workspaceFolder}/art.modules/imgui.interface/PropertiesWindow.ixx",
-                "${workspaceFolder}/imgui/imgui.cpp",
-                "${workspaceFolder}/imgui/imgui_demo.cpp",
-                "${workspaceFolder}/imgui/imgui_draw.cpp",
-                "${workspaceFolder}/imgui/imgui_tables.cpp",
-                "${workspaceFolder}/imgui/imgui_widgets.cpp",
-                "${workspaceFolder}/imgui/imgui_impl_sdl3.cpp",
-                "${workspaceFolder}/imgui/imgui_impl_sdlrenderer3.cpp",
-                "${workspaceFolder}/imgui/imgui_impl_sdlgpu3.cpp",
-                "${workspaceFolder}/imgui/TextEditor.cpp",
-                "${workspaceFolder}/Art3DC++.cpp",
-                "/Fe:", "${workspaceFolder}/Art3DC++.exe",
-                "/Fd:", "${workspaceFolder}/vc140.pdb", // <-- Explicitly forces the PDB to generate inside your project folder
-                "/link",
-                "/LIBPATH:${workspaceFolder}\\art.libs\\x64",
-                "SDL3.lib",
-                "SDL3_image.lib",
-                "SDL3_ttf.lib"
+                "${workspaceFolder}\\Art3DC++.vcxproj",
+                "/p:Configuration=Debug",
+                "/p:Platform=x64",
+                "/m"
             ],
             "options": {
-                "cwd": "${workspaceFolder}",       // <-- Changed from ${fileDirname} to keep your project folder locked as the working directory
-                "env": {
-                    "INCLUDE": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\include;C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um",
-                    "LIB": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\lib\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\ucrt\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64"
-                }
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$msCompile"
@@ -56,7 +21,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "compiler: cl.exe with SDL3 context"
+            "detail": "Build using MSBuild (Visual Studio project)"
         }
     ]
 }

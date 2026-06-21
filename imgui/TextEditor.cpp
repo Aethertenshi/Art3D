@@ -45,10 +45,10 @@ TextEditor::TextEditor()
 	, mHandleKeyboardInputs(true)
 	, mHandleMouseInputs(true)
 	, mIgnoreImGuiChild(false)
-	, mShowWhitespaces(true)
+	, mShowWhitespaces(false)
 	, mStartTime(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count())
 {
-	SetPalette(GetDarkPalette());
+	SetPalette(GetOneDarkPalette());
 	SetLanguageDefinition(LanguageDefinition::HLSL());
 	mLines.push_back(Line());
 }
@@ -1318,6 +1318,68 @@ void TextEditor::EnterCharacter(ImWchar aChar, bool aShift)
 		}
 	} // HasSelection
 
+	// Auto-close brackets and quotes
+	if (mLanguageDefinition.mAutoIndentation)
+	{
+		auto coord = GetActualCursorCoordinates();
+		auto& line = mLines[coord.mLine];
+		auto cindex = GetCharacterIndex(coord);
+		bool handled = false;
+
+		// Skip closing bracket/quote if next char already matches
+		if (cindex < (int)line.size() &&
+			(aChar == ')' || aChar == '}' || aChar == ']' || aChar == '"' || aChar == '\'') &&
+			line[cindex].mChar == aChar)
+		{
+			auto skipTo = Coordinates(coord.mLine, GetCharacterColumn(coord.mLine, cindex + 1));
+			SetCursorPosition(skipTo);
+			mCursorPositionChanged = true;
+			return;
+		}
+
+		// Insert matching pair for opening bracket/quote
+		char close = 0;
+		if (aChar == '(') close = ')';
+		else if (aChar == '{') close = '}';
+		else if (aChar == '[') close = ']';
+		else if (aChar == '"') close = '"';
+		else if (aChar == '\'') close = '\'';
+
+		if (close)
+		{
+			char openBuf[7] = {};
+			int e = ImTextCharToUtf8(openBuf, 7, aChar);
+			char closeBuf[7] = {};
+			int ce = ImTextCharToUtf8(closeBuf, 7, close);
+
+			if (e > 0 && ce > 0)
+			{
+				auto insertAt = cindex;
+				for (auto p = openBuf; *p != '\0'; p++, ++insertAt)
+					line.insert(line.begin() + insertAt, Glyph(*p, PaletteIndex::Default));
+				u.mAdded = openBuf;
+
+				for (auto p = closeBuf; *p != '\0'; p++, ++insertAt)
+					line.insert(line.begin() + insertAt, Glyph(*p, PaletteIndex::Default));
+				u.mAdded += closeBuf;
+
+				SetCursorPosition(Coordinates(coord.mLine, GetCharacterColumn(coord.mLine, cindex + e)));
+				handled = true;
+			}
+		}
+
+		if (handled)
+		{
+			mTextChanged = true;
+			u.mAddedEnd = GetActualCursorCoordinates();
+			u.mAfter = mState;
+			AddUndo(u);
+			Colorize(coord.mLine - 1, 3);
+			EnsureCursorVisible();
+			return;
+		}
+	}
+
 	auto coord = GetActualCursorCoordinates();
 	u.mAddedStart = coord;
 
@@ -2086,6 +2148,34 @@ const TextEditor::Palette & TextEditor::GetRetroBluePalette()
 			0x40000000, // Current line edge
 		} };
 	return p;
+}
+
+const TextEditor::Palette & TextEditor::GetOneDarkPalette()
+{
+    const static Palette p = { {
+            0xffbfb2ab, // Default          #abb2bf
+            0xff756ce0, // Keyword          #e06c75
+            0xff669ad1, // Number           #d19a66
+            0xff79c398, // String           #98c379
+            0xff79c398, // Char literal     #98c379
+            0xffc2b656, // Punctuation      #56b6c2
+            0xff756ce0, // Preprocessor     #e06c75
+            0xffdd78c6, // Identifier       #c678dd
+            0xff7bc0e5, // Known identifier #e5c07b
+            0xffefaf61, // Preproc identifier #61afef
+            0xff70635c, // Comment (single) #5c6370
+            0xff70635c, // Comment (multi)  #5c6370
+            0xff342c28, // Background       #282c34
+            0xffff8b52, // Cursor           #528bff
+            0x80513e3e, // Selection        #3e4451
+            0x80756ce0, // ErrorMarker      #e06c75
+            0x40756ce0, // Breakpoint       #e06c75
+            0xff70635c, // Line number      #5c6370
+            0x403c312c, // Current line fill
+            0x40342c28, // Current line fill (inactive)
+            0x40513e3e, // Current line edge
+        } };
+    return p;
 }
 
 
@@ -3160,35 +3250,49 @@ const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Lua()
 	return langDef;
 }
 
-const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Wren()
+const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::JavaScript()
 {
 	static bool inited = false;
 	static LanguageDefinition langDef;
 	if (!inited)
 	{
 		static const char* const keywords[] = {
-			"break", "class", "construct", "continue", "else", "false", "for", "foreign", "if", "import", "in", "is", "null", "return", "static", "super", "this", "true", "var", "while"
+			"async", "await", "break", "case", "catch", "class", "const",
+			"continue", "debugger", "default", "delete", "do", "else",
+			"enum", "export", "extends", "false", "finally", "for",
+			"function", "get", "if", "import", "in", "instanceof", "let",
+			"new", "null", "of", "print", "return", "set", "static",
+			"super", "switch", "target", "this", "throw", "true", "try",
+			"typeof", "undefined", "var", "void", "while", "with", "yield"
 		};
 
 		for (auto& k : keywords)
 			langDef.mKeywords.insert(k);
 
 		static const char* const identifiers[] = {
-			"System", "Num", "String", "Bool", "List", "Map", "Fn", "Sequence", "Range", "Object"
+			"Array", "ArrayBuffer", "BigInt", "Boolean", "DataView", "Date",
+			"Error", "EvalError", "Float32Array", "Float64Array", "Function",
+			"Infinity", "Int8Array", "Int16Array", "Int32Array", "JSON",
+			"Map", "Math", "NaN", "Number", "Object", "Promise", "Proxy",
+			"RangeError", "ReferenceError", "RegExp", "Set", "String",
+			"Symbol", "SyntaxError", "TypeError", "URIError", "Uint8Array",
+			"Uint16Array", "Uint32Array", "WeakMap", "WeakSet", "console",
+			"document", "globalThis", "window"
 		};
 		for (auto& k : identifiers)
 		{
 			Identifier id;
-			id.mDeclaration = "Built-in class";
+			id.mDeclaration = "Built-in object";
 			langDef.mIdentifiers.insert(std::make_pair(std::string(k), id));
 		}
 
 		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("L?\\\"(\\\\.|[^\\\"])*\\\"", PaletteIndex::String));
 		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("\\\'[^\\\']*\\\'", PaletteIndex::String));
+		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("`(?:[^`\\\\]|\\\\.)*`", PaletteIndex::String));
 		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("0[xX][0-9a-fA-F]+[uU]?[lL]?[lL]?", PaletteIndex::Number));
 		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)([eE][+-]?[0-9]+)?[fF]?", PaletteIndex::Number));
 		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("[+-]?[0-9]+[Uu]?[lL]?[lL]?", PaletteIndex::Number));
-		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("[a-zA-Z_][a-zA-Z0-9_]*", PaletteIndex::Identifier));
+		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("[a-zA-Z_$][a-zA-Z0-9_$]*", PaletteIndex::Identifier));
 		langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, PaletteIndex>("[\\[\\]\\{\\}\\!\\%\\^\\&\\*\\(\\)\\-\\+\\=\\~\\|\\<\\>\\?\\/\\;\\,\\.]", PaletteIndex::Punctuation));
 
 		langDef.mCommentStart = "/*";
@@ -3198,7 +3302,7 @@ const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Wren()
 		langDef.mCaseSensitive = true;
 		langDef.mAutoIndentation = true;
 
-		langDef.mName = "Wren";
+		langDef.mName = "JavaScript";
 
 		inited = true;
 	}

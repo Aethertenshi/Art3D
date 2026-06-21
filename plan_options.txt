@@ -1,0 +1,23 @@
+Proposed plan for cleaning up the rendering pipeline:
+
+Option 1: Incremental Cleanup
+- Move rendering code into a separate Renderer class
+- Remove dead shadow pass code entirely
+- Fix the uniform push bugs (always push LightUBO)
+- Add proper mesh/resource management
+- Clean up Render3DObject function
+- Keep everything working step by step
+
+Option 2: Rewrite from Scratch
+- Tear out the current rendering pipeline
+- Build a clean minimal rendering backend
+- Start with only what's needed (simple forward rendering, no shadows)
+- Re-integrate with existing scene/UI code
+
+Option 3: Just Remove Dead Code
+- Strip out the disabled shadow pass and shadow infrastructure
+- Fix the uniform push bug
+- Leave everything else as-is
+- Quickest fix, least intrusive
+
+Which option do you want?

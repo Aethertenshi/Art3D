@@ -77,7 +77,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;$(ProjectDir)engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -95,7 +95,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;$(ProjectDir)engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -111,7 +111,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;$(ProjectDir)engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,7 +133,8 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)imgui;$(ProjectDir)engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,21 +147,48 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Art3DC++.cpp" />
-    <ClInclude Include="art.modules\art.datatypes\Matrix4x4.h" />
-    <ClInclude Include="art.modules\art.datatypes\Position2D.h" />
-    <ClInclude Include="art.modules\art.datatypes\Size2D.h" />
-    <ClInclude Include="art.modules\art.datatypes\GameObject.h" />
-    <ClInclude Include="art.modules\art.datatypes\Vector3D.h" />
-    <ClInclude Include="art.modules\art.datatypes\BasePart.h" />
-    <ClInclude Include="art.modules\art.enginemovement\CameraController.h" />
-    <ClInclude Include="art.modules\art.userinterface\BaseDrawables.h" />
-    <ClInclude Include="art.modules\art.userinterface\Frame.h" />
-    <ClInclude Include="art.modules\art.userinterface\GpuPipeline.h" />
-    <ClInclude Include="art.modules\art.objects\Part.h" />
-    <ClInclude Include="art.modules\art.objects\LightSource.h" />
-    <ClInclude Include="art.modules\imgui.interface\ExplorerWindow.h" />
-    <ClInclude Include="art.modules\imgui.interface\PropertiesWindow.h" />
+    <ClCompile Include="engine\main.cpp" />
+    <ClCompile Include="engine\core\Application.cpp" />
+    <ClCompile Include="engine\render\Renderer.cpp" />
+    <ClCompile Include="engine\render\OBJLoader.cpp" />
+    <ClCompile Include="engine\render\GLTFLoader.cpp" />
+    <ClCompile Include="engine\scene\SceneUtils.cpp" />
+    <ClCompile Include="engine\editor\Autocomplete.cpp" />
+    <ClCompile Include="engine\editor\ScriptEditor.cpp" />
+    <ClCompile Include="engine\editor\Toolbar.cpp" />
+    <ClCompile Include="engine\editor\ImportModal.cpp" />
+    <ClCompile Include="engine\script\ScriptManager.cpp" />
+    <ClInclude Include="engine\core\Application.h" />
+    <ClInclude Include="engine\core\Position2D.h" />
+    <ClInclude Include="engine\core\Size2D.h" />
+    <ClInclude Include="engine\core\Vector3D.h" />
+    <ClInclude Include="engine\core\Matrix4x4.h" />
+    <ClInclude Include="engine\core\GameObject.h" />
+    <ClInclude Include="engine\core\Raycast.h" />
+        <ClInclude Include="engine\render\GpuPipeline.h" />
+        <ClInclude Include="engine\render\Vertex.h" />
+        <ClInclude Include="engine\render\MeshBuilder.h" />
+        <ClInclude Include="engine\render\GpuTypes.h" />
+    <ClInclude Include="engine\render\Renderer.h" />
+    <ClInclude Include="engine\render\OBJLoader.h" />
+    <ClInclude Include="engine\scene\BasePart.h" />
+    <ClInclude Include="engine\scene\Part.h" />
+    <ClInclude Include="engine\scene\LightSource.h" />
+    <ClInclude Include="engine\scene\Sun.h" />
+    <ClInclude Include="engine\scene\LogicScript.h" />
+    <ClInclude Include="engine\scene\SceneUtils.h" />
+    <ClInclude Include="engine\camera\CameraController.h" />
+    <ClInclude Include="engine\ui\BaseDrawables.h" />
+    <ClInclude Include="engine\ui\Frame.h" />
+    <ClInclude Include="engine\editor\ExplorerWindow.h" />
+    <ClInclude Include="engine\editor\PropertiesWindow.h" />
+    <ClInclude Include="engine\editor\ConsoleWindow.h" />
+    <ClInclude Include="engine\editor\Autocomplete.h" />
+    <ClInclude Include="engine\editor\ScriptEditor.h" />
+    <ClInclude Include="engine\editor\Toolbar.h" />
+    <ClInclude Include="engine\editor\ImportModal.h" />
+    <ClInclude Include="engine\script\qjspp.hpp" />
+    <ClInclude Include="engine\script\ScriptManager.h" />
     <ClInclude Include="imgui\TextEditor.h" />
     <ClCompile Include="imgui\imgui.cpp" />
     <ClCompile Include="imgui\imgui_demo.cpp" />
@@ -169,8 +198,29 @@
     <ClCompile Include="imgui\imgui_impl_sdl3.cpp" />
     <ClCompile Include="imgui\imgui_impl_sdlgpu3.cpp" />
     <ClCompile Include="imgui\TextEditor.cpp" />
+    <ClCompile Include="engine\script\quickjs\quickjs.c">
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4146 /wd4703 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="engine\script\quickjs\quickjs-libc.c">
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="engine\script\quickjs\libregexp.c">
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="engine\script\quickjs\libunicode.c">
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="engine\script\quickjs\dtoa.c">
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4146 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
   </ItemGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -180,7 +180,7 @@ public:
 		static const LanguageDefinition& SQL();
 		static const LanguageDefinition& AngelScript();
 		static const LanguageDefinition& Lua();
-		static const LanguageDefinition& Wren();
+		static const LanguageDefinition& JavaScript();
 	};
 
 	TextEditor();
@@ -267,6 +267,7 @@ public:
 	static const Palette& GetDarkPalette();
 	static const Palette& GetLightPalette();
 	static const Palette& GetRetroBluePalette();
+	static const Palette& GetOneDarkPalette();
 
 private:
 	typedef std::vector<std::pair<std::regex, PaletteIndex>> RegexList;

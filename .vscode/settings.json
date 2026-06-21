@@ -12,5 +12,7 @@
     "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
         "*.ixx": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "E:/ProjectTemp-Server/Art3DC++/art.modules/art.script-logic/quickjs",
+    "cmake.ignoreCMakeListsMissing": true
 }

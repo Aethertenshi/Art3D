@@ -26,6 +26,19 @@ x86/
 # VS Code files
 .vscode/ipch/
 
+# SDL DLLs in root (keep in art.libs)
+/SDL3.dll
+/SDL3_image.dll
+/SDL3_ttf.dll
+
 # SDL DLLs exception (keep DLLs/libs inside art.libs)
 !/art.libs/**/*.dll
 !/art.libs/**/*.lib
+
+# Legacy/backup
+/backup_wren_scriptlogic/
+/git-clones/
+/wren.dll
+
+# Old monolithic source (replaced by engine/)
+/Art3DC++.cpp

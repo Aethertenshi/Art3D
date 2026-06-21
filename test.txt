@@ -1,0 +1,17 @@
+export Player {
+    let number = 0
+    let name = ""
+    function addHealth(){
+
+    }
+    function reduceHealth(){
+
+    }
+}
+
+public function Player.addHealth(){
+
+}
+public function Player.reduceHealth(){
+
+}
