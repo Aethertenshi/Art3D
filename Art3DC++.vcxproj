@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="engine\main.cpp" />
     <ClCompile Include="engine\core\Application.cpp" />
+    <ClCompile Include="engine\audio\AudioEngine.cpp" />
     <ClCompile Include="engine\render\Renderer.cpp" />
     <ClCompile Include="engine\render\OBJLoader.cpp" />
     <ClCompile Include="engine\render\GLTFLoader.cpp" />

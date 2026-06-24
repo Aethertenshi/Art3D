@@ -11,6 +11,8 @@
 #include "editor/ExplorerWindow.h"
 #include "editor/PropertiesWindow.h"
 #include "editor/ConsoleWindow.h"
+#include "editor/AssetBrowser.h"
+#include "audio/AudioPlayer.h"
 
 class Application {
 public:
@@ -36,6 +38,9 @@ private:
     ExplorerWindow m_Explorer;
     PropertiesWindow m_Properties;
     ConsoleWindow m_Console;
+    AssetBrowser m_AssetBrowser;
+    AudioPlayer m_AudioPlayer;
+    ma_engine* m_AudioEngine = nullptr;
 
     std::vector<std::shared_ptr<GameObject>> m_SceneObjects;
     std::vector<std::vector<std::shared_ptr<GameObject>>> m_UndoStack;
@@ -59,4 +64,5 @@ private:
 
     void SaveHistory();
     void AddObject(std::shared_ptr<GameObject> obj);
+    void HandleAssetDrop(const std::string& path);
 };

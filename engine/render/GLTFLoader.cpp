@@ -11,6 +11,7 @@
 #include <string>
 #include <algorithm>
 #include <filesystem>
+#include <unordered_map>
 
 static void ComputeFlatNormal(Vertex& v0, Vertex& v1, Vertex& v2)
 {
@@ -27,10 +28,57 @@ static void ComputeFlatNormal(Vertex& v0, Vertex& v1, Vertex& v2)
     v0.nz = v1.nz = v2.nz = nz;
 }
 
-bool LoadGLTF(const std::string& filepath, std::vector<Vertex>& outVertices, std::vector<uint32_t>& outIndices, Vector3D& outCenter,
-              SDL_GPUDevice* device, SDL_GPUTexture** outTexture)
+static SDL_GPUTexture* LoadMaterialTexture(SDL_GPUDevice* device, const cgltf_material* material, const std::string& filepath)
 {
-    if (outTexture) *outTexture = nullptr;
+    if (!material || !device) return nullptr;
+
+    const cgltf_texture_view* texView = nullptr;
+    if (material->has_pbr_metallic_roughness && material->pbr_metallic_roughness.base_color_texture.texture)
+        texView = &material->pbr_metallic_roughness.base_color_texture;
+    if (!texView && material->emissive_texture.texture)
+        texView = &material->emissive_texture;
+    if (!texView && material->normal_texture.texture)
+        texView = &material->normal_texture;
+    if (!texView && material->occlusion_texture.texture)
+        texView = &material->occlusion_texture;
+
+    if (!texView || !texView->texture || !texView->texture->image) return nullptr;
+
+    const cgltf_image& image = *texView->texture->image;
+    if (!image.uri) return nullptr;
+
+    std::string texPath = image.uri;
+    std::string resolvedPath = texPath;
+    std::filesystem::path gltfDir = std::filesystem::path(filepath).parent_path();
+    if (!gltfDir.empty()) {
+        resolvedPath = (gltfDir / texPath).string();
+    }
+    if (!std::filesystem::exists(resolvedPath)) {
+        resolvedPath = texPath;
+    }
+    if (!std::filesystem::exists(resolvedPath)) {
+        std::cerr << "glTF texture file not found: " << resolvedPath << std::endl;
+        return nullptr;
+    }
+
+    SDL_GPUCommandBuffer* texCmd = SDL_AcquireGPUCommandBuffer(device);
+    SDL_GPUCopyPass* texCopy = SDL_BeginGPUCopyPass(texCmd);
+    int imgW = 0, imgH = 0;
+    SDL_GPUTexture* loadedTex = IMG_LoadGPUTexture(device, texCopy, resolvedPath.c_str(), &imgW, &imgH);
+    SDL_EndGPUCopyPass(texCopy);
+    SDL_SubmitGPUCommandBuffer(texCmd);
+    if (loadedTex) {
+        std::cout << "Loaded glTF texture: " << resolvedPath << " (" << imgW << "x" << imgH << ")" << std::endl;
+    } else {
+        std::cerr << "Failed to load glTF texture: " << resolvedPath << std::endl;
+    }
+    return loadedTex;
+}
+
+bool LoadGLTF(const std::string& filepath, std::vector<Vertex>& outVertices, std::vector<uint32_t>& outIndices, Vector3D& outCenter,
+              SDL_GPUDevice* device, std::vector<GLTFSubMesh>& outSubMeshes)
+{
+    outSubMeshes.clear();
 
     cgltf_options options = {};
     cgltf_data* data = nullptr;
@@ -51,6 +99,14 @@ bool LoadGLTF(const std::string& filepath, std::vector<Vertex>& outVertices, std
             return false;
         }
     }
+
+    // Track per-primitive index ranges and material pointers
+    struct PrimitiveInfo {
+        uint32_t IndexStart;
+        uint32_t IndexCount;
+        const cgltf_material* Material;
+    };
+    std::vector<PrimitiveInfo> primitives;
 
     // Walk all meshes, flatten all triangle primitives into one vertex/index array
     for (cgltf_size mi = 0; mi < data->meshes_count; ++mi)
@@ -138,6 +194,9 @@ bool LoadGLTF(const std::string& filepath, std::vector<Vertex>& outVertices, std
                 outVertices.push_back(v);
             }
 
+            // Record index start before reading indices
+            uint32_t idxStart = (uint32_t)outIndices.size();
+
             // Read indices
             if (prim.indices)
             {
@@ -168,78 +227,39 @@ bool LoadGLTF(const std::string& filepath, std::vector<Vertex>& outVertices, std
                 for (cgltf_size ii = 0; ii < vertCount; ++ii)
                     outIndices.push_back(baseVertex + (uint32_t)ii);
             }
+
+            // Record this primitive's range and material
+            PrimitiveInfo piInfo;
+            piInfo.IndexStart = idxStart;
+            piInfo.IndexCount = (uint32_t)(outIndices.size() - idxStart);
+            piInfo.Material = prim.material;
+            primitives.push_back(piInfo);
         }
     }
 
-    // Load first mesh material's base-color texture if available
-    if (outTexture && device && data->meshes_count > 0)
+    // Build base sub-mesh entries (all with null textures)
+    for (auto& pi : primitives)
     {
-        for (cgltf_size mi = 0; mi < data->meshes_count && !(*outTexture); ++mi)
+        GLTFSubMesh sm;
+        sm.IndexStart = pi.IndexStart;
+        sm.IndexCount = pi.IndexCount;
+        sm.Texture = nullptr;
+        outSubMeshes.push_back(sm);
+    }
+
+    // Load textures for unique materials and assign to sub-meshes
+    if (device)
+    {
+        std::unordered_map<const cgltf_material*, SDL_GPUTexture*> matToTexture;
+        for (size_t i = 0; i < primitives.size(); ++i)
         {
-            const cgltf_mesh& mesh = data->meshes[mi];
-            for (cgltf_size pi = 0; pi < mesh.primitives_count && !(*outTexture); ++pi)
+            const cgltf_material* mat = primitives[i].Material;
+            if (!mat) continue;
+            if (!matToTexture.count(mat))
             {
-                const cgltf_primitive& prim = mesh.primitives[pi];
-                if (!prim.material) continue;
-
-                // Find first available texture on the material
-                const cgltf_texture_view* texView = nullptr;
-                if (prim.material->has_pbr_metallic_roughness && prim.material->pbr_metallic_roughness.base_color_texture.texture)
-                    texView = &prim.material->pbr_metallic_roughness.base_color_texture;
-                if (!texView && prim.material->emissive_texture.texture)
-                    texView = &prim.material->emissive_texture;
-                if (!texView && prim.material->normal_texture.texture)
-                    texView = &prim.material->normal_texture;
-                if (!texView && prim.material->occlusion_texture.texture)
-                    texView = &prim.material->occlusion_texture;
-
-                if (texView && texView->texture && texView->texture->image)
-                {
-                    const cgltf_image& image = *texView->texture->image;
-                    if (image.uri)
-                    {
-                        std::string texPath = image.uri;
-                        std::string resolvedPath = texPath;
-                        // Resolve relative to glTF file directory
-                        std::filesystem::path gltfDir = std::filesystem::path(filepath).parent_path();
-                        if (!gltfDir.empty()) {
-                            resolvedPath = (gltfDir / texPath).string();
-                        }
-                        // Fallback: try the path as-is
-                        if (!std::filesystem::exists(resolvedPath)) {
-                            resolvedPath = texPath;
-                        }
-                        if (std::filesystem::exists(resolvedPath))
-                        {
-                            SDL_GPUCommandBuffer* texCmd = SDL_AcquireGPUCommandBuffer(device);
-                            SDL_GPUCopyPass* texCopy = SDL_BeginGPUCopyPass(texCmd);
-                            int imgW = 0, imgH = 0;
-                            SDL_GPUTexture* loadedTex = IMG_LoadGPUTexture(device, texCopy, resolvedPath.c_str(), &imgW, &imgH);
-                            SDL_EndGPUCopyPass(texCopy);
-                            SDL_SubmitGPUCommandBuffer(texCmd);
-                            if (loadedTex)
-                            {
-                                *outTexture = loadedTex;
-                                std::cout << "Loaded glTF texture: " << resolvedPath << " (" << imgW << "x" << imgH << ")" << std::endl;
-                            }
-                            else
-                            {
-                                std::cerr << "Failed to load glTF texture: " << resolvedPath << std::endl;
-                            }
-                        }
-                        else
-                        {
-                            std::cerr << "glTF texture file not found: " << resolvedPath << std::endl;
-                        }
-                    }
-                    else if (image.buffer_view && image.buffer_view->buffer)
-                    {
-                        // Embedded image data (e.g., in .glb) - skip for now
-                        // IMG_LoadGPUTexture requires a file path; could use SDL_IOFromMem
-                        std::cout << "Embedded glTF image found (not yet supported, will use vertex colors)" << std::endl;
-                    }
-                }
+                matToTexture[mat] = LoadMaterialTexture(device, mat, filepath);
             }
+            outSubMeshes[i].Texture = matToTexture[mat];
         }
     }
 

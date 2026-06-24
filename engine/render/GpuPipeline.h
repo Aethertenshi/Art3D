@@ -327,7 +327,7 @@ public:
             shadowPSInfo.entrypoint = "PSShadow";
             shadowPSInfo.format = SDL_GPU_SHADERFORMAT_DXIL;
             shadowPSInfo.stage = SDL_GPU_SHADERSTAGE_FRAGMENT;
-            shadowPSInfo.num_samplers = 0;
+            shadowPSInfo.num_samplers = 2;
             shadowPSInfo.num_uniform_buffers = 0;
             SDL_GPUShader* shadowPShader = SDL_CreateGPUShader(Device, &shadowPSInfo);
             SDL_free(shadowPSCode);

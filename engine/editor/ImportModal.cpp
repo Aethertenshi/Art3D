@@ -119,8 +119,8 @@ void DrawImportModal(bool& showImportModal,
             std::vector<Vertex> vertices;
             std::vector<uint32_t> indices;
             Vector3D center(0, 0, 0);
-            SDL_GPUTexture* importedTexture = nullptr;
-            if (LoadGLTF(gltfPathBuf, vertices, indices, center, pipeline.Device, &importedTexture)) {
+            std::vector<GLTFSubMesh> loadedSubMeshes;
+            if (LoadGLTF(gltfPathBuf, vertices, indices, center, pipeline.Device, loadedSubMeshes)) {
                 if (importFlipWinding) {
                     for (size_t i = 0; i + 2 < indices.size(); i += 3)
                         std::swap(indices[i + 1], indices[i + 2]);
@@ -131,15 +131,23 @@ void DrawImportModal(bool& showImportModal,
                     auto newObj = std::make_shared<GameObject>("Imported glTF", center, Vector3D(0, 0, 0), Vector3D(importScale, importScale, importScale));
                     newObj->CustomVertexBuffer = std::shared_ptr<SDL_GPUBuffer>(rawVB, GpuBufferDeleter{pipeline.Device});
                     newObj->CustomIndexBuffer = std::shared_ptr<SDL_GPUBuffer>(rawIB, GpuBufferDeleter{pipeline.Device});
-                    if (importedTexture) {
-                        newObj->CustomTexture = std::shared_ptr<SDL_GPUTexture>(importedTexture, GpuTextureDeleter{pipeline.Device});
+                    for (auto& sm : loadedSubMeshes) {
+                        GameObject::SubMesh objSm;
+                        objSm.IndexStart = sm.IndexStart;
+                        objSm.IndexCount = sm.IndexCount;
+                        if (sm.Texture) {
+                            objSm.Texture = std::shared_ptr<SDL_GPUTexture>(sm.Texture, GpuTextureDeleter{pipeline.Device});
+                        }
+                        newObj->CustomSubMeshes.push_back(objSm);
                     }
                     newObj->CustomIndexCount = (uint32_t)indices.size();
                     newObj->GpuDevice = pipeline.Device;
                     addObject(newObj);
                     showImportModal = false; ImGui::CloseCurrentPopup();
-                } else if (importedTexture) {
-                    SDL_ReleaseGPUTexture(pipeline.Device, importedTexture);
+                } else {
+                    for (auto& sm : loadedSubMeshes) {
+                        if (sm.Texture) SDL_ReleaseGPUTexture(pipeline.Device, sm.Texture);
+                    }
                 }
             }
         }

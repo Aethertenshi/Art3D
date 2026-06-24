@@ -151,17 +151,27 @@ void Renderer::Render3DObject(GameObject* obj, SDL_GPURenderPass* renderPass, SD
         indexBinding.offset = 0;
         SDL_BindGPUIndexBuffer(renderPass, &indexBinding, SDL_GPU_INDEXELEMENTSIZE_32BIT);
 
-        // Bind diffuse texture (s1) — use custom texture if present, else default
-        SDL_GPUTextureSamplerBinding texBinding = {};
-        SDL_GPUTexture* diffuseTex = obj->CustomTexture ? obj->CustomTexture.get() : pipeline.DefaultTexture;
-        texBinding.texture = diffuseTex;
-        texBinding.sampler = pipeline.DefaultSampler;
-        SDL_BindGPUFragmentSamplers(renderPass, 1, &texBinding, 1);
-
         SDL_PushGPUVertexUniformData(cmd, 0, &vsUniform, sizeof(vsUniform));
 
-        uint32_t indexCount = obj->CustomIndexBuffer ? obj->CustomIndexCount : 36;
-        SDL_DrawGPUIndexedPrimitives(renderPass, indexCount, 1, 0, 0, 0);
+        if (!obj->CustomSubMeshes.empty()) {
+            for (auto& sm : obj->CustomSubMeshes) {
+                SDL_GPUTextureSamplerBinding texBinding = {};
+                SDL_GPUTexture* diffuseTex = sm.Texture ? sm.Texture.get() : pipeline.DefaultTexture;
+                texBinding.texture = diffuseTex;
+                texBinding.sampler = pipeline.DefaultSampler;
+                SDL_BindGPUFragmentSamplers(renderPass, 1, &texBinding, 1);
+
+                SDL_DrawGPUIndexedPrimitives(renderPass, sm.IndexCount, 1, sm.IndexStart, 0, 0);
+            }
+        } else {
+            SDL_GPUTextureSamplerBinding texBinding = {};
+            texBinding.texture = pipeline.DefaultTexture;
+            texBinding.sampler = pipeline.DefaultSampler;
+            SDL_BindGPUFragmentSamplers(renderPass, 1, &texBinding, 1);
+
+            uint32_t indexCount = obj->CustomIndexBuffer ? obj->CustomIndexCount : 36;
+            SDL_DrawGPUIndexedPrimitives(renderPass, indexCount, 1, 0, 0, 0);
+        }
     }
 
     for (auto& child : obj->Children) {
@@ -496,8 +506,28 @@ Matrix4x4 Renderer::RenderShadowPass(SDL_GPUCommandBuffer* cmd,
             SDL_BindGPUIndexBuffer(shadowPass, &ib, SDL_GPU_INDEXELEMENTSIZE_32BIT);
 
             SDL_PushGPUVertexUniformData(cmd, 0, &u, sizeof(u));
-            uint32_t idxCount = o->CustomIndexBuffer ? o->CustomIndexCount : 36;
-            SDL_DrawGPUIndexedPrimitives(shadowPass, idxCount, 1, 0, 0, 0);
+
+            if (!o->CustomSubMeshes.empty()) {
+                for (auto& sm : o->CustomSubMeshes) {
+                    SDL_GPUTextureSamplerBinding bindings[2] = {};
+                    bindings[0].texture = m_Pipeline.ShadowMap;
+                    bindings[0].sampler = m_Pipeline.ShadowSampler;
+                    SDL_GPUTexture* diffuseTex = sm.Texture ? sm.Texture.get() : m_Pipeline.DefaultTexture;
+                    bindings[1].texture = diffuseTex;
+                    bindings[1].sampler = m_Pipeline.DefaultSampler;
+                    SDL_BindGPUFragmentSamplers(shadowPass, 0, bindings, 2);
+                    SDL_DrawGPUIndexedPrimitives(shadowPass, sm.IndexCount, 1, sm.IndexStart, 0, 0);
+                }
+            } else {
+                SDL_GPUTextureSamplerBinding bindings[2] = {};
+                bindings[0].texture = m_Pipeline.ShadowMap;
+                bindings[0].sampler = m_Pipeline.ShadowSampler;
+                bindings[1].texture = m_Pipeline.DefaultTexture;
+                bindings[1].sampler = m_Pipeline.DefaultSampler;
+                SDL_BindGPUFragmentSamplers(shadowPass, 0, bindings, 2);
+                uint32_t idxCount = o->CustomIndexBuffer ? o->CustomIndexCount : 36;
+                SDL_DrawGPUIndexedPrimitives(shadowPass, idxCount, 1, 0, 0, 0);
+            }
 
             for (auto& child : o->Children) {
                 renderDepth(child.get());

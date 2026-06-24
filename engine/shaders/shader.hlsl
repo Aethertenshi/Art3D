@@ -72,18 +72,21 @@ VSOutput VSMain(VSInput input)
 struct ShadowVSOutput
 {
     float4 Position : SV_Position;
+    float2 TexCoord : TEXCOORD0;
 };
 
 ShadowVSOutput VSShadow(VSInput input)
 {
     ShadowVSOutput output;
     output.Position = mul(MVP, float4(input.Position, 1.0f));
+    output.TexCoord = input.TexCoord;
     return output;
 }
 
-void PSShadow()
+void PSShadow(ShadowVSOutput input)
 {
-    // No-op: depth is written by the rasterizer, no color target
+    float4 texColor = DiffuseTexture.Sample(DiffuseSampler, input.TexCoord);
+    if (texColor.a < 0.3f) discard;
 }
 
 float ComputeShadow(float3 worldPos)
@@ -173,6 +176,7 @@ float4 PSMain(VSOutput input) : SV_Target
     lit += AmbientIntensity;
 
     float4 texColor = DiffuseTexture.Sample(DiffuseSampler, input.TexCoord);
+    if (texColor.a < 0.3f) discard;
     lit *= input.Color.rgb * texColor.rgb;
 
     return float4(saturate(lit), input.Color.a);

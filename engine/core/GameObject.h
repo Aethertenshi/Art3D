@@ -25,9 +25,15 @@ public:
     Vector3D PositionOffset = Vector3D(0.0f, 0.0f, 0.0f);
     Vector3D RotationOffset = Vector3D(0.0f, 0.0f, 0.0f);
 
+    struct SubMesh {
+        uint32_t IndexStart;
+        uint32_t IndexCount;
+        std::shared_ptr<SDL_GPUTexture> Texture;
+    };
+    std::vector<SubMesh> CustomSubMeshes;
+
     std::shared_ptr<SDL_GPUBuffer> CustomVertexBuffer = nullptr;
     std::shared_ptr<SDL_GPUBuffer> CustomIndexBuffer = nullptr;
-    std::shared_ptr<SDL_GPUTexture> CustomTexture = nullptr;
     uint32_t CustomIndexCount = 0;
 
     GameObject(const std::string& name, Position2D position, Size2D size)
@@ -67,7 +73,7 @@ public:
         target->RotationOffset = RotationOffset;
         target->CustomVertexBuffer = CustomVertexBuffer;
         target->CustomIndexBuffer = CustomIndexBuffer;
-        target->CustomTexture = CustomTexture;
+        target->CustomSubMeshes = CustomSubMeshes;
         target->CustomIndexCount = CustomIndexCount;
         target->GpuDevice = GpuDevice;
         target->Children.clear();

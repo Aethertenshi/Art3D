@@ -13,6 +13,11 @@ ImFont* g_MonoFont = nullptr;
 #include "editor/Toolbar.h"
 #include "editor/ImportModal.h"
 #include "editor/Autocomplete.h"
+#include "render/OBJLoader.h"
+#include "render/GLTFLoader.h"
+#include "audio/miniaudio.h"
+#include <filesystem>
+#include <algorithm>
 #include "imgui.h"
 #include "imgui_internal.h"
 #include "imgui_impl_sdl3.h"
@@ -105,6 +110,27 @@ bool Application::Initialize() {
     initInfo.ColorTargetFormat = SDL_GetGPUSwapchainTextureFormat(m_Pipeline.Device, m_Window);
     initInfo.MSAASamples = SDL_GPU_SAMPLECOUNT_1;
     ImGui_ImplSDLGPU3_Init(&initInfo);
+
+    // Initialize miniaudio engine
+    m_AudioEngine = new ma_engine();
+    if (ma_engine_init(NULL, m_AudioEngine) != MA_SUCCESS) {
+        std::cerr << "Failed to initialize audio engine" << std::endl;
+        delete m_AudioEngine;
+        m_AudioEngine = nullptr;
+    } else {
+        m_AudioPlayer.SetEngine(m_AudioEngine);
+    }
+
+    // Asset Browser: double-click audio files → load into player
+    m_AssetBrowser.m_OnActivateFile = [this](const std::string& path) {
+        std::string ext = std::filesystem::path(path).extension().string();
+        std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
+        if (ext == ".wav" || ext == ".mp3" || ext == ".ogg" || ext == ".flac" || ext == ".aac" || ext == ".wma" || ext == ".m4a") {
+            if (m_AudioEngine) {
+                m_AudioPlayer.LoadFile(path);
+            }
+        }
+    };
 
     m_Console.Initialize();
     SetupCallbacks();
@@ -233,6 +259,8 @@ void Application::SetupDockspace() {
             ImGui::DockBuilderSplitNode(dock_main_id, ImGuiDir_Left,  0.20f, &dock_id_left,   &dock_main_id);
             ImGui::DockBuilderSplitNode(dock_main_id, ImGuiDir_Right, 0.20f, &dock_id_right,  &dock_main_id);
             ImGui::DockBuilderDockWindow("Console",       dock_id_bottom);
+            ImGui::DockBuilderDockWindow("Asset Browser", dock_id_bottom);
+            ImGui::DockBuilderDockWindow("Audio Player",  dock_id_bottom);
             ImGui::DockBuilderDockWindow("Properties",    dock_id_left);
             ImGui::DockBuilderDockWindow("Explorer",      dock_id_right);
             ImGui::DockBuilderDockWindow("Script Editor", dock_main_id);
@@ -559,6 +587,9 @@ void Application::RenderFrame() {
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Window")) {
+            if (ImGui::MenuItem("Audio Player", nullptr, m_AudioPlayer.IsOpen())) {
+                m_AudioPlayer.ToggleOpen();
+            }
             if (ImGui::MenuItem("Reset Layout")) {
                 s_resetDockspaceLayout = true;
             }
@@ -573,6 +604,19 @@ void Application::RenderFrame() {
 
     SetupDockspace();
 
+    // Viewport drop target for asset browser drags
+    if (ImGui::IsDragDropActive()) {
+        ImGui::SetCursorScreenPos(ImVec2(0, 0));
+        ImGui::InvisibleButton("##viewportDrop", ImGui::GetMainViewport()->Size);
+        if (ImGui::BeginDragDropTarget()) {
+            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("ASSET_PATH")) {
+                std::string path((const char*)payload->Data);
+                HandleAssetDrop(path);
+            }
+            ImGui::EndDragDropTarget();
+        }
+    }
+
     m_Explorer.Draw(m_SceneObjects, m_SelectedObject);
 
     bool saveHistoryFromProps = false;
@@ -580,6 +624,12 @@ void Application::RenderFrame() {
     if (saveHistoryFromProps) SaveHistory();
 
     m_Console.Draw();
+
+    m_AssetBrowser.Draw();
+
+    if (m_AudioPlayer.IsOpen()) {
+        m_AudioPlayer.Draw();
+    }
 
     SyncOpenScripts(m_SceneObjects);
     DrawScriptEditor(m_SelectedObject);
@@ -711,6 +761,59 @@ void Application::RenderFrame() {
     }
 }
 
+void Application::HandleAssetDrop(const std::string& path) {
+    std::string ext = std::filesystem::path(path).extension().string();
+    std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
+
+    if (ext == ".obj") {
+        std::vector<Vertex> vertices;
+        std::vector<uint32_t> indices;
+        Vector3D center(0, 0, 0);
+        if (LoadObj(path, vertices, indices, center)) {
+            SDL_GPUBuffer* rawVB = m_Pipeline.CreateAndUploadBuffer(vertices.data(), (Uint32)(vertices.size() * sizeof(Vertex)), SDL_GPU_BUFFERUSAGE_VERTEX);
+            SDL_GPUBuffer* rawIB = m_Pipeline.CreateAndUploadBuffer(indices.data(), (Uint32)(indices.size() * sizeof(uint32_t)), SDL_GPU_BUFFERUSAGE_INDEX);
+            if (rawVB && rawIB) {
+                auto newObj = std::make_shared<GameObject>("Imported OBJ", center, Vector3D(0, 0, 0), Vector3D(1, 1, 1));
+                newObj->CustomVertexBuffer = std::shared_ptr<SDL_GPUBuffer>(rawVB, GpuBufferDeleter{m_Pipeline.Device});
+                newObj->CustomIndexBuffer = std::shared_ptr<SDL_GPUBuffer>(rawIB, GpuBufferDeleter{m_Pipeline.Device});
+                newObj->CustomIndexCount = (uint32_t)indices.size();
+                newObj->GpuDevice = m_Pipeline.Device;
+                AddObject(newObj);
+            }
+        }
+    } else if (ext == ".gltf" || ext == ".glb") {
+        std::vector<Vertex> vertices;
+        std::vector<uint32_t> indices;
+        Vector3D center(0, 0, 0);
+        std::vector<GLTFSubMesh> loadedSubMeshes;
+        if (LoadGLTF(path, vertices, indices, center, m_Pipeline.Device, loadedSubMeshes)) {
+            SDL_GPUBuffer* rawVB = m_Pipeline.CreateAndUploadBuffer(vertices.data(), (Uint32)(vertices.size() * sizeof(Vertex)), SDL_GPU_BUFFERUSAGE_VERTEX);
+            SDL_GPUBuffer* rawIB = m_Pipeline.CreateAndUploadBuffer(indices.data(), (Uint32)(indices.size() * sizeof(uint32_t)), SDL_GPU_BUFFERUSAGE_INDEX);
+            if (rawVB && rawIB) {
+                auto newObj = std::make_shared<GameObject>("Imported glTF", center, Vector3D(0, 0, 0), Vector3D(1, 1, 1));
+                newObj->CustomVertexBuffer = std::shared_ptr<SDL_GPUBuffer>(rawVB, GpuBufferDeleter{m_Pipeline.Device});
+                newObj->CustomIndexBuffer = std::shared_ptr<SDL_GPUBuffer>(rawIB, GpuBufferDeleter{m_Pipeline.Device});
+                for (auto& sm : loadedSubMeshes) {
+                    GameObject::SubMesh objSm;
+                    objSm.IndexStart = sm.IndexStart;
+                    objSm.IndexCount = sm.IndexCount;
+                    if (sm.Texture) {
+                        objSm.Texture = std::shared_ptr<SDL_GPUTexture>(sm.Texture, GpuTextureDeleter{m_Pipeline.Device});
+                    }
+                    newObj->CustomSubMeshes.push_back(objSm);
+                }
+                newObj->CustomIndexCount = (uint32_t)indices.size();
+                newObj->GpuDevice = m_Pipeline.Device;
+                AddObject(newObj);
+            } else {
+                for (auto& sm : loadedSubMeshes) {
+                    if (sm.Texture) SDL_ReleaseGPUTexture(m_Pipeline.Device, sm.Texture);
+                }
+            }
+        }
+    }
+}
+
 void Application::MainLoop() {
     while (m_Running) {
         Uint64 frameStartTicks = SDL_GetTicks();
@@ -724,6 +827,12 @@ void Application::MainLoop() {
 }
 
 void Application::Shutdown() {
+    if (m_AudioEngine) {
+        ma_engine_uninit(m_AudioEngine);
+        delete m_AudioEngine;
+        m_AudioEngine = nullptr;
+    }
+
     ImGui_ImplSDLGPU3_Shutdown();
     ImGui_ImplSDL3_Shutdown();
     ImGui::DestroyContext();
